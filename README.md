@@ -128,8 +128,6 @@ Code Institute have an amazing channel for all things accessibility (a11y-access
 - CSS
 - Python
 - JavaScript
-- Django
-- PostgreSQL
 
 ### Frameworks, Libraries & Programs Used
 

@@ -1,0 +1,1 @@
+web: gunicorn WC_MOGS.wsgi

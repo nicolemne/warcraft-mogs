@@ -183,9 +183,9 @@ Use this part of the README to link to your TESTING.md file - you can view the e
 
 ## Credits
 
-[Django Model Meta Options](https://docs.djangoproject.com/en/4.2/ref/models/options/)
-[Django Slug Tutorial](https://learndjango.com/tutorials/django-slug-tutorial)
-[Class Based Generic Views Django](https://www.geeksforgeeks.org/class-based-generic-views-django-create-retrieve-update-delete/)
+- [Django Model Meta Options](https://docs.djangoproject.com/en/4.2/ref/models/options/)
+- [Django Slug Tutorial](https://learndjango.com/tutorials/django-slug-tutorial)
+- [Class Based Generic Views Django](https://www.geeksforgeeks.org/class-based-generic-views-django-create-retrieve-update-delete/)
 
 ### Code Used
 

@@ -183,13 +183,14 @@ Use this part of the README to link to your TESTING.md file - you can view the e
 
 ## Credits
 
-👩🏻‍💻 View an example of a completed Credits section [here](https://github.com/kera-cudmore/BookWorm#Credits)
-
-The Credits section is where you can credit all the people and sources you used throughout your project.
+[Django Model Meta Options](https://docs.djangoproject.com/en/4.2/ref/models/options/)
+[Django Slug Tutorial](https://learndjango.com/tutorials/django-slug-tutorial)
+[Class Based Generic Views Django](https://www.geeksforgeeks.org/class-based-generic-views-django-create-retrieve-update-delete/)
 
 ### Code Used
 
-If you have used some code in your project that you didn't write, this is the place to make note of it. Credit the author of the code and if possible a link to where you found the code. You could also add in a brief description of what the code does, or what you are using it for here.
+From the "I Think Therefore I blog" project I've used a lot of inspiration and a bit of code: 
+- Post & Comment Models
 
 ### Content
 

@@ -206,5 +206,6 @@ I would like to thank and acknowledge the following people, who have shown inval
 
 - Dan Ford, boyfriend and biggest supporter.
 - Mitko Bachvarov, my mentor at Code Institute, for the great help and support with my project. 
+- Emelie Hansson, fellow Code Insitute student whom I've had a lot of support from. 
 - Joseph Doble, for providing easy-to-understand explanations and helping with my questions.
-- Kera Cudmore, for this README template.
+- Kera Cudmore, for the README and TESTING template.

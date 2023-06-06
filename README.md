@@ -175,11 +175,7 @@ Use git clone + the URL in your terminal, or unpack the ZIP containing the proje
 
 ## Testing
 
-Start as you mean to go on - and get used to writing a TESTING.md file from the very first project!
-
-Testing requirements aren't massive for your first project, however if you start using a TESTING.md file from your first project you will thank yourself later when completing your later projects, which will contain much more information.
-  
-Use this part of the README to link to your TESTING.md file - you can view the example TESTING.md file [here](milestone1-testing.md)
+Please refer to the [TESTING.md](TESTING.md) file for all testing performed.
 
 ## Credits
 

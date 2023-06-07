@@ -30,7 +30,7 @@
                         <span class="number-of-likes">
                             {{ post.number_of_likes }}
                         </span>
-                        {% with comments.count as total_comments %}
+                        {% with post.comments.count as total_comments %}
                         <i class="fa-regular fa-comment comments-icon"></i>
                         <span>
                             {{ total_comments }}

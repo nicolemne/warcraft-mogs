@@ -10804,7 +10804,7 @@ header.masthead .post-heading .meta a {
 
 /* Creates a little space between the count of likes towards the icon for comments */
 .number-of-likes {
-  margin-right: 7px
+  margin-right: 7px;
 }
 
 /* Sets a red colour to the heart icon */
@@ -10820,4 +10820,9 @@ header.masthead .post-heading .meta a {
 /* Removes the italic styling on the comment and like count */
 .no-italics {
   font-style: normal;   
+}
+
+/* Removes border around comment box, excerpt and comment field */
+.remove-border {
+  --bs-card-border-width: 0px;
 }

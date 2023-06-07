@@ -10,7 +10,8 @@ STATUS = ((0, "Draft"), (1, "Published"))
 class Post(models.Model):
     title = models.CharField(max_length=200, unique=True)
     slug = models.SlugField(max_length=200, unique=True)
-    author = models.ForeignKey(User, on_delete=models.CASCADE, related_name="blog_posts")
+    author = models.ForeignKey(
+        User, on_delete=models.CASCADE, related_name="blog_posts")
     updated_on = models.DateTimeField(auto_now=True)
     content = models.TextField()
     featured_image = CloudinaryField('image', default='placeholder')
@@ -18,6 +19,8 @@ class Post(models.Model):
     created_on = models.DateTimeField(auto_now_add=True)
     status = models.IntegerField(choices=STATUS, default=0)
     likes = models.ManyToManyField(User, related_name='blog_likes', blank=True)
+    user_comments = models.ManyToManyField(
+        User, related_name='blog_user_comments', blank=True)
 
     class Meta:
         ordering = ['-created_on']
@@ -28,10 +31,14 @@ class Post(models.Model):
     def number_of_likes(self):
         return self.likes.count()
 
+    def number_of_user_comments(self):
+        return self.user_comments.count()
+
 
 # Comment model to feature a blog comment and its content
 class Comment(models.Model):
-    post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name='comments')
+    post = models.ForeignKey(
+        Post, on_delete=models.CASCADE, related_name='comments')
     name = models.CharField(max_length=80)
     email = models.EmailField()
     body = models.TextField()

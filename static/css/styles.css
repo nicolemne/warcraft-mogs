@@ -1,4 +1,7 @@
 @charset "UTF-8";
+
+/* My own CSS code can be found at the bottom */
+
 /*!
 * Start Bootstrap - Clean Blog v6.0.9 (https://startbootstrap.com/theme/clean-blog)
 * Copyright 2013-2023 Start Bootstrap
@@ -10795,4 +10798,26 @@ header.masthead .post-heading .meta a {
   .post-preview > a > .post-title {
     font-size: 2.25rem;
   }
+}
+
+/* My CSS code */
+
+/* Creates a little space between the count of likes towards the icon for comments */
+.number-of-likes {
+  margin-right: 7px
+}
+
+/* Sets a red colour to the heart icon */
+.likes-icon {
+  color: #bd3e3e;
+}
+
+/* Sets a blue colour to the chat icon */
+.comments-icon {
+  color: #3e82bd;
+}
+
+/* Removes the italic styling on the comment and like count */
+.no-italics {
+  font-style: normal;   
 }

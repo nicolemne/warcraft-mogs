@@ -4,16 +4,16 @@
 
 <!-- Main Content-->
 <div class="container px-4 px-lg-5">
+    {% for post in post_list %}
     <div class="row gx-4 gx-lg-5 justify-content-center">
         <div class="col-md-10 col-lg-8 col-xl-7">
             <!-- TEST Post preview-->
-            {% for post in post_list %}
             <div class="post-preview">
                 <div class="image-container">
                     {% if "placeholder" in post.featured_image.url %}
-                    <img class="card-img-top" src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg">
+                    <img class="card-img" src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg">
                     {% else %}
-                    <img class="card-img-top" src=" {{ post.featured_image.url }}">
+                    <img class="card-img" src=" {{ post.featured_image.url }}">
                     {% endif %}
                 </div>
                 <a href="post.html">
@@ -24,10 +24,17 @@
                     Posted by
                     <a href="#!">{{ post.author }}</a>
                     {{ post.created_on }}
-                </p>
-                <p class="text-muted h6">
-                    <i class="far fa-heart"></i>
-                    {{ post.number_of_likes }}
+                    <br>
+                    <span class="text-muted h6 no-italics">
+                        <i class="far fa-heart likes-icon"></i>
+                        <span class="number-of-likes">
+                            {{ post.number_of_likes }}
+                        </span>
+                        <i class="fa-regular fa-comment comments-icon"></i>
+                        <span>
+                            {{ post.number_of_user_comments }}
+                        </span>
+                    </span>
                 </p>
                 <!-- Divider-->
                 <hr class="my-4" />

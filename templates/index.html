@@ -16,7 +16,7 @@
                     <img class="card-img" src=" {{ post.featured_image.url }}">
                     {% endif %}
                 </div>
-                <a href="post.html">
+                <a href="{% url 'post_detail' post.slug %}">
                     <h2 class="post-title">{{ post.title }}</h2>
                     <h3 class="post-subtitle">{{ post.excerpt }}</h3>
                 </a>
@@ -30,15 +30,22 @@
                         <span class="number-of-likes">
                             {{ post.number_of_likes }}
                         </span>
+                        {% with comments.count as total_comments %}
                         <i class="fa-regular fa-comment comments-icon"></i>
                         <span>
-                            {{ post.number_of_user_comments }}
+                            {{ total_comments }}
                         </span>
+                        {% endwith %}
                     </span>
                 </p>
                 <!-- Divider-->
                 <hr class="my-4" />
             </div>
+        </div>
+        {% if forloop.counter|divisibleby:3 %}
+        <div class="row">
+            {% endif %}
+            {% endfor %}
         </div>
     </div>
     {% if is_paginated %}
@@ -53,7 +60,6 @@
         </ul>
     </nav>
     {% endif %}
-    {% endfor %}
 </div>
 
 {% endblock %}

@@ -4,62 +4,58 @@
 
 <!-- Main Content-->
 <div class="container px-4 px-lg-5 transparent-background">
-        {% for post in post_list %}
-        <div class="row gx-4 gx-lg-5 justify-content-center">
-            <div class="col-md-10 col-lg-8 col-xl-7">
-                <!-- TEST Post preview-->
-                <div class="post-preview">
-                    <div class="image-container">
-                        {% if "placeholder" in post.featured_image.url %}
-                        <img class="card-img" src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg">
-                        {% else %}
-                        <img class="card-img" src=" {{ post.featured_image.url }}">
-                        {% endif %}
-                    </div>
-                    <a href="{% url 'post_detail' post.slug %}">
-                        <h2 class="post-title post-title-colour">{{ post.title }}</h2>
-                        <h3 class="post-subtitle">{{ post.excerpt }}</h3>
-                    </a>
-                    <p class="post-meta">
-                        Posted by
-                        <a href="#!">{{ post.author }}</a>
-                        {{ post.created_on }}
-                        <br>
-                        <span class="text-muted h6 no-italics">
-                            <i class="far fa-heart likes-icon"></i>
-                            <span class="number-of-likes">
-                                {{ post.number_of_likes }}
-                            </span>
-                            {% with post.comments.count as total_comments %}
-                            <i class="fa-regular fa-comment comments-icon"></i>
-                            <span>
-                                {{ total_comments }}
-                            </span>
-                            {% endwith %}
-                        </span>
-                    </p>
-                    <!-- Divider-->
-                    <hr class="my-4" />
+    <div class="row gx-4 gx-lg-5 justify-content-center">
+        <div class="col-md-10 col-lg-8 col-xl-7">
+            <!-- Content here -->
+            {% for post in post_list %}
+            <div class="post-preview">
+                <div class="image-container">
+                    {% if "placeholder" in post.featured_image.url %}
+                    <img class="card-img" src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg">
+                    {% else %}
+                    <img class="card-img" src="{{ post.featured_image.url }}">
+                    {% endif %}
                 </div>
+                <a href="{% url 'post_detail' post.slug %}">
+                    <h2 class="post-title post-title-colour">{{ post.title }}</h2>
+                    <h3 class="post-subtitle">{{ post.excerpt }}</h3>
+                </a>
+                <p class="post-meta">
+                    Posted by
+                    <a href="#!"><span class="username-colour">{{ post.author }}</span></a>
+                    {{ post.created_on }}
+                    <br>
+                    <span class="text-muted h6 no-italics">
+                        <i class="far fa-heart likes-icon"></i>
+                        <span class="number-of-likes">{{ post.number_of_likes }}</span>
+                        {% with post.comments.count as total_comments %}
+                        <i class="fa-regular fa-comment comments-icon"></i>
+                        <span>{{ total_comments }}</span>
+                        {% endwith %}
+                    </span>
+                </p>
+                <!-- Divider-->
+                <hr class="my-4" />
             </div>
             {% if forloop.counter|divisibleby:3 %}
-            <div class="row">
-                {% endif %}
-                {% endfor %}
-            </div>
         </div>
-        {% if is_paginated %}
-        <nav aria-label="Page navigation">
-            <ul class="pagination justify-content-center">
-                {% if page_obj.has_previous %}
-                <li><a href="?page={{ page_obj.previous_page_number }}" class="page-link">&laquo; PREV </a></li>
-                {% endif %}
-                {% if page_obj.has_next %}
-                <li><a href="?page={{ page_obj.next_page_number }}" class="page-link"> NEXT &raquo;</a></li>
-                {% endif %}
-            </ul>
-        </nav>
-        {% endif %}
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+    {% if is_paginated %}
+    <nav aria-label="Page navigation">
+        <ul class="pagination justify-content-center">
+            {% if page_obj.has_previous %}
+            <li><a href="?page={{ page_obj.previous_page_number }}" class="page-link">&laquo; PREV </a></li>
+            {% endif %}
+            {% if page_obj.has_next %}
+            <li><a href="?page={{ page_obj.next_page_number }}" class="page-link"> NEXT &raquo;</a></li>
+            {% endif %}
+        </ul>
+    </nav>
+    {% endif %}
 </div>
 
 {% endblock %}

@@ -35,7 +35,7 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 DEBUG = True
 
 ALLOWED_HOSTS = ['warcraft-mogs.herokuapp.com', 'localhost',
-                 '8000-nicolemne-warcraftmogs-1sqa2tu0ftz.ws-eu98.gitpod.io']
+                 '8000-nicolemne-warcraftmogs-1sqa2tu0ftz.ws-eu99.gitpod.io']
 
 # Application definition
 

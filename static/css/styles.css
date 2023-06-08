@@ -64,7 +64,7 @@
   --bs-body-font-size: 1rem;
   --bs-body-font-weight: 400;
   --bs-body-line-height: 1.5;
-  --bs-body-color: #212529;
+  --bs-body-color: #fff;
   --bs-body-bg: #fff;
   --bs-border-width: 1px;
   --bs-border-style: solid;
@@ -4686,7 +4686,6 @@ fieldset:disabled .btn {
   --bs-card-cap-color: ;
   --bs-card-height: ;
   --bs-card-color: ;
-  --bs-card-bg: #fff;
   --bs-card-img-overlay-padding: 1rem;
   --bs-card-group-margin: 0.75rem;
   position: relative;
@@ -4791,6 +4790,7 @@ fieldset:disabled .btn {
 .card-img-top,
 .card-img-bottom {
   width: 100%;
+  padding-top: 60px;
 }
 
 .card-group>.card {
@@ -8768,7 +8768,7 @@ fieldset:disabled .btn {
 
 .text-muted {
   --bs-text-opacity: 1;
-  color: #6c757d !important;
+  color: #dbdbdb !important;
 }
 
 .text-black-50 {
@@ -12594,26 +12594,17 @@ header.masthead .post-heading .meta a {
   }
 }
 
-/* -----------------  My CSS code */
+/* --------------------------------------  My CSS code -------------------------------------- */
 
-/* Background Image */
-/* Added in body line 108-110 */
+/* --------------------------------------  Background */
+/* Background image code written in the body line 108-110*/
 
 /* Transparent background to content */
 .transparent-background {
   background-color: rgba(0, 0, 0, 0.650);
 }
 
-/* Modify the background color */
-.navbar-custom {
-  background-color: lightgreen;
-}
-
-/* Post.details.html margin */
-.content-container {
-  margin-left: 10%;
-  margin-right: 10%;
-}
+/* --------------------------------------  Icons */
 
 /* Creates a little space between the count of likes towards the icon for comments */
 .number-of-likes {
@@ -12635,20 +12626,12 @@ header.masthead .post-heading .meta a {
   font-style: normal;
 }
 
-/* Removes border around comment box, excerpt and comment field */
-.remove-border {
-  --bs-card-border-width: 0px;
-}
+/* --------------------------------------  Post.detail */
 
-/* Removes black border around the like button */
-.btn-border {
-  border: 0px;
-  background-color: #fff;
-}
-
-/* Sets the font to italic*/
-.italic-style {
-  font-style: italic;
+/* Post.details.html margin */
+.content-container {
+  margin-left: 10%;
+  margin-right: 10%;
 }
 
 /* Removes paragraph margin in post_detail.html */
@@ -12661,7 +12644,37 @@ header.masthead .post-heading .meta a {
   margin-top: 1em;
 }
 
+/* --------------------------------------  Comments field */
+
+/* Removes border around comment box, excerpt and comment field */
+.remove-border {
+  --bs-card-border-width: 0px;
+}
+
+/* Removes black border around the like button */
+.btn-border {
+  border: 0px;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+/* --------------------------------------  Generic Styling */
+
+/* Removes margin in the row class */
+.row-margin {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+/* Sets the font to italic*/
+.italic-style {
+  font-style: italic;
+}
+
 /* Post title colour */
 .post-title-colour {
-  color: #b04841;
+  color: #ba3e3c;
+}
+
+.username-colour {
+  color: #ba3e3c;
 }

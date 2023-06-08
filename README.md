@@ -188,8 +188,8 @@ Please refer to the [TESTING.md](TESTING.md) file for all testing performed.
 From the "I Think Therefore I blog" project I've used a lot of inspiration and a bit of code: 
 - Post & Comment Models
 
-From Emelie Hansson's PP4 
-- Hero image styling
+From a comment on [Stackoverflow](https://stackoverflow.com/questions/2662039/keep-background-image-fixed-during-scroll-using-css):
+- Fixed background image 
 
 ### Content
 

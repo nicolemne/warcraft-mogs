@@ -188,6 +188,9 @@ Please refer to the [TESTING.md](TESTING.md) file for all testing performed.
 From the "I Think Therefore I blog" project I've used a lot of inspiration and a bit of code: 
 - Post & Comment Models
 
+From Emelie Hansson's PP4 
+- Hero image styling
+
 ### Content
 
 Who wrote the content for the website? Was it yourself - or have you made the site for someone and they specified what the site was to say? This is the best place to put this information.

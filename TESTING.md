@@ -101,7 +101,7 @@ List (or put in a table) all known bugs on your site here as soon as you find th
 | :--- | :--- | :--- |
 | 1 | When I tried to access the /admin site when the server was ran locally, I would receive error messages such as DISALLOWED HOST, which made me unable to access the Admin site. | By adding the Gitpod URL to the ALLOWED_HOSTS in settings.py as well as adding the SITE_ID = 1, the problem was solved. |
 | 2 | Everytime a new post was uploaded with an image, the images would appear in different sizes - making the content appear out of alignment. | After a lot of testing back and forth, moving the % for post in post_list % placement to underneath the first div, made the content align neatly. |
-| 3 | xxx | xxx |
+| 3 | The main content in the pages had a slight gap from the header | By adding the Bootstrap class mb-0 to the header class in base.html, I was able to remove the margin. |
 | 4 | xxx | xxx |
 | 5 | xxx | xxx |
 | 6 | xxx | xxx |

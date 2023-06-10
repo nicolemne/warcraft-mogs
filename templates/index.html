@@ -11,13 +11,13 @@
             <div class="post-preview">
                 <div class="image-container">
                     {% if "placeholder" in post.featured_image.url %}
-                    <img class="card-img" src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg">
+                    <img class="card-img" src="https://res.cloudinary.com/dohlebn4a/image/upload/v1686340872/header_liwt82.png">
                     {% else %}
                     <img class="card-img" src="{{ post.featured_image.url }}">
                     {% endif %}
                 </div>
                 <a href="{% url 'post_detail' post.slug %}">
-                    <h2 class="post-title post-title-colour">{{ post.title }}</h2>
+                    <h2 class="post-title post-title-style">{{ post.title }}</h2>
                     <h3 class="post-subtitle">{{ post.excerpt }}</h3>
                 </a>
                 <p class="post-meta">

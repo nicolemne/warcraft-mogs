@@ -16,7 +16,7 @@
         <p>{% blocktrans %} Welcome to Warcraft Mogs! <br><br> To upload your transmog, leave a comment or like a post,
           please
           log in. <br> If you have not created an account yet, please
-          <a href="{{ signup_url }}">Sign up</a>.{% endblocktrans %}
+          <a class="remove-underline" href="{{ signup_url }}">Sign up</a>.{% endblocktrans %}
         </p>
         <form class="login" method="POST" action="{% url 'account_login' %}">
           {% csrf_token %}

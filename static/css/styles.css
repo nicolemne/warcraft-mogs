@@ -76,7 +76,7 @@
   --bs-border-radius-xl: 1rem;
   --bs-border-radius-2xl: 2rem;
   --bs-border-radius-pill: 50rem;
-  --bs-link-color: #b04b45;
+  --bs-link-color: #9c74c2;
   --bs-link-hover-color: #fff;
   --bs-code-color: #d63384;
   --bs-highlight-bg: #fff3cd;
@@ -106,7 +106,7 @@ body {
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   background-position: center;
-  background-image: url('https://res.cloudinary.com/dohlebn4a/image/upload/v1686177302/hero-bg_dawbzs.jpg');
+  background-image: url('https://res.cloudinary.com/dohlebn4a/image/upload/v1686342652/bg_rdgxfo.png');
   background-attachment: fixed;
 }
 
@@ -4790,7 +4790,8 @@ fieldset:disabled .btn {
 .card-img-top,
 .card-img-bottom {
   width: 100%;
-  padding-top: 60px;
+  margin-top: 60px;
+  border: solid 1px;
 }
 
 .card-group>.card {
@@ -12305,10 +12306,6 @@ hr {
   opacity: 1;
 }
 
-p {
-  margin: 2rem 0;
-}
-
 p a {
   text-decoration: underline;
 }
@@ -12563,7 +12560,7 @@ header.masthead .post-heading .meta a {
 .post-preview>a:focus,
 .post-preview>a:hover {
   text-decoration: none;
-  color: #b04b45;
+  color: #684c8f;
 }
 
 .post-preview>a>.post-title {
@@ -12626,6 +12623,17 @@ header.masthead .post-heading .meta a {
   font-style: normal;
 }
 
+/* Sets like and comment icon to bigger size in post.detail.html */
+.icon-size {
+  font-size: 20px;
+}
+
+/* Sets margin between icons in post.detail.html */
+.icon-container {
+  margin-top: 60px;
+  margin-bottom: 0px;
+}
+
 /* --------------------------------------  Post.detail */
 
 /* Post.details.html margin */
@@ -12639,10 +12647,20 @@ header.masthead .post-heading .meta a {
   margin: 0;
 }
 
-/* Adds title margin in post_detail.html */
-.title-margin {
-  margin-top: 1em;
+/* Sets a margin left to the Title and author/date */
+.post-title-author {
+  margin-left: 26px;
+  margin-top: 20px;
 }
+
+/* Post title styling */
+.post-title-style {
+  color: #9c74c2;
+  text-shadow: 2px 2px #36244d;
+  font-size: 3rem;
+  margin-top: 15px;
+}
+
 
 /* --------------------------------------  Comments field */
 
@@ -12670,11 +12688,10 @@ header.masthead .post-heading .meta a {
   font-style: italic;
 }
 
-/* Post title colour */
-.post-title-colour {
-  color: #ba3e3c;
+.username-colour {
+  color: #9c74c2;
 }
 
-.username-colour {
-  color: #ba3e3c;
+.remove-underline {
+  text-decoration: none;
 }

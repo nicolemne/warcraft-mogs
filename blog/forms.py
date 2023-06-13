@@ -3,21 +3,30 @@ from django import forms
 
 
 class UploadForm(forms.ModelForm):
+    '''
+    Creates the form when uploading a post
+    '''
     class Meta:
         model = Post
-        fields = ('title', 'content')
+        fields = ('title', 'content', 'featured_image',)
 
         widgets = {
-            'title': forms.TextInput(attrs={'class': 'form-control'}),
-            'content': forms.Textarea(attrs={'class': 'form-control'}),
+            'title': forms.TextInput(attrs={'class': 'form-control',
+                                            'placeholder': 'Title'}),
+            'content': forms.Textarea(attrs={'class': 'form-control',
+                                             'placeholder': 'Write something...'}),
         }
 
 
 class CommentForm(forms.ModelForm):
+    '''
+    Creates the form when commenting on a post
+    '''
     class Meta:
         model = Comment
         fields = ('body',)
 
         widgets = {
-            'content': forms.Textarea(attrs={'class': 'form-control'}),
+            'body': forms.Textarea(attrs={'class': 'form-control',
+                                          'placeholder': 'Write something...'}),
         }

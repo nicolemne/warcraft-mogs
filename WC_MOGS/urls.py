@@ -15,6 +15,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -22,3 +24,4 @@ urlpatterns = [
     path("", include('blog.urls'), name='blog_urls'),
     path('accounts/', include('allauth.urls')),
 ]
+# When uploading an image it will create an URL we can reference to

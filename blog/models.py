@@ -7,8 +7,10 @@ from django.urls import reverse
 STATUS = ((0, "Draft"), (1, "Published"))
 
 
-# Post model to feature a blog post and its content
 class Post(models.Model):
+    '''
+    Post model to feature a blog post and its content
+    '''
     title = models.CharField(max_length=200, unique=True)
     slug = models.SlugField(max_length=200, unique=True)
     author = models.ForeignKey(
@@ -34,13 +36,15 @@ class Post(models.Model):
         return reverse('post_detail')
 
 
-# Comment model to feature a blog comment and its content
 class Comment(models.Model):
+    '''
+    Comment model to feature a blog comment and its content
+    '''
     post = models.ForeignKey(
         Post, on_delete=models.CASCADE, related_name='comments')
     name = models.CharField(max_length=80)
     email = models.EmailField()
-    body = models.TextField()
+    body = models.TextField(verbose_name="")
     created_on = models.DateTimeField(auto_now_add=True)
     approved = models.BooleanField(default=False)
 

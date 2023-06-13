@@ -214,6 +214,7 @@ Please refer to the [TESTING.md](TESTING.md) file for all testing performed.
 - [Django Slug Tutorial](https://learndjango.com/tutorials/django-slug-tutorial)
 - [Class Based Generic Views Django](https://www.geeksforgeeks.org/class-based-generic-views-django-create-retrieve-update-delete/)
 - [Bootstrap Forms](https://getbootstrap.com/docs/4.0/components/forms/)
+- [Verbose Name](https://stackoverflow.com/questions/636905/django-form-set-label)
 
 ### Code Used
 

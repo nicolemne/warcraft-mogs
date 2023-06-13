@@ -59,7 +59,7 @@ class PostDetail(View):
             comment.post = post
             comment.save()
             messages.success(request,
-                             'Comment successfully added!')
+                             'Comment successfully added! Now awaiting approval...')
         else:
             comment_form = CommentForm()
 

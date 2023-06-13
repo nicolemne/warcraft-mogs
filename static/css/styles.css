@@ -12593,67 +12593,54 @@ header.masthead .post-heading .meta a {
 
 /* --------------------------------------  My CSS code -------------------------------------- */
 
-/* --------------------------------------  Background */
+/* -----------------------  Background */
 /* Background image code written in the body line 108-110*/
 
-/* Transparent background to content */
 .transparent-background {
   background-color: rgba(0, 0, 0, 0.650);
 }
 
-/* --------------------------------------  Icons */
-
-/* Creates a little space between the count of likes towards the icon for comments */
+/* -----------------------  Icons */
 .number-of-likes {
   margin-right: 7px;
 }
 
-/* Sets a red colour to the heart icon */
 .likes-icon {
   color: #bd3e3e;
 }
 
-/* Sets a blue colour to the chat icon */
 .comments-icon {
   color: #3e82bd;
 }
 
-/* Removes the italic styling on the comment and like count */
 .no-italics {
   font-style: normal;
 }
 
-/* Sets like and comment icon to bigger size in post.detail.html */
 .icon-size {
   font-size: 20px;
 }
 
-/* Sets margin between icons in post.detail.html */
 .icon-container {
   margin-top: 60px;
   margin-bottom: 0px;
 }
 
-/* --------------------------------------  Post.detail */
-
-/* Post.details.html margin */
+/* -----------------------  Post.detail */
 .content-container {
   margin-left: 10%;
   margin-right: 10%;
 }
 
-/* Removes paragraph margin in post_detail.html */
 .p-margin {
   margin: 0;
 }
 
-/* Sets a margin left to the Title and author/date */
 .post-title-author {
   margin-left: 26px;
   margin-top: 20px;
 }
 
-/* Post title styling */
 .post-title-style {
   color: #9c74c2;
   text-shadow: 2px 2px #36244d;
@@ -12661,29 +12648,22 @@ header.masthead .post-heading .meta a {
   margin-top: 15px;
 }
 
-
-/* --------------------------------------  Comments field */
-
-/* Removes border around comment box, excerpt and comment field */
+/* -----------------------  Comments field */
 .remove-border {
   --bs-card-border-width: 0px;
 }
 
-/* Removes black border around the like button */
 .btn-border {
   border: 0px;
   background-color: rgba(0, 0, 0, 0);
 }
 
-/* --------------------------------------  Generic Styling */
-
-/* Removes margin in the row class */
+/* -----------------------  Generic Styling */
 .row-margin {
   margin-right: 0;
   margin-left: 0;
 }
 
-/* Sets the font to italic*/
 .italic-style {
   font-style: italic;
 }
@@ -12694,4 +12674,12 @@ header.masthead .post-heading .meta a {
 
 .remove-underline {
   text-decoration: none;
+}
+
+/* ----------------------- Button styling*/
+.btn-style {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  background-color: #36244d;
+  border: solid 1px #fff;
 }

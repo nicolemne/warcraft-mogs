@@ -15,7 +15,14 @@ If you want to add optional [shields.io](https://shields.io) badges to your READ
 ## CONTENTS
 
 * [User Experience](#user-experience-ux)
+
+* [Agile Methodology](#agile-methodology)
   * [User Stories](#user-stories)
+  * [Iterations](#iterations)
+    * [Iteration 1](#iteration-1)
+    * [Iteration 2](#iteration-2)
+    * [Iteration 3](#iteration-3)
+  * [Future Implementations](#future-implementations)
 
 * [Design](#design)
   * [Colour Scheme](#colour-scheme)
@@ -25,7 +32,6 @@ If you want to add optional [shields.io](https://shields.io) badges to your READ
 
 * [Features](#features)
   * [General Features on Each Page](#general-features-on-each-page)
-  * [Future Implementations](#future-implementations)
   * [Accessibility](#accessibility)
 
 * [Technologies Used](#technologies-used)
@@ -52,9 +58,34 @@ If you want to add optional [shields.io](https://shields.io) badges to your READ
 
 👩🏻‍💻 View an example of a completed user experience section [here](https://github.com/kera-cudmore/Bully-Book-Club#user-experience-ux)
 
+## **Agile Methodology**
+---
+The Agile Methodology was used to develop this website. It was implemented through GitHub and the Project/Kanban Board: 
+[Warcraft Mogs](https://github.com/users/nicolemne/projects/3).
+
 ### User Stories
 
-Add your user stories here. You want to include first time visitors and returning visitors here as a minimum. Think about each group, and the experience and journey you want them to have on your site. It really helps to think about this before you start coding, and will really help with creating your wireframes.
+#### Iteration 1
+
+#### Iteration 2
+
+#### Iteration 3
+
+### Future Implementations (backlog):
+
+With the Kanban board, the project was split into four sections;
+
+- Todo
+- In Progress
+- Done
+- Backlog (future additions)
+
+<details>
+<summary>Kanban board:</summary>
+<br>
+
+![Kanban]()
+</details>
 
 ## Design
 
@@ -182,6 +213,7 @@ Please refer to the [TESTING.md](TESTING.md) file for all testing performed.
 - [Django Model Meta Options](https://docs.djangoproject.com/en/4.2/ref/models/options/)
 - [Django Slug Tutorial](https://learndjango.com/tutorials/django-slug-tutorial)
 - [Class Based Generic Views Django](https://www.geeksforgeeks.org/class-based-generic-views-django-create-retrieve-update-delete/)
+- [Bootstrap Forms](https://getbootstrap.com/docs/4.0/components/forms/)
 
 ### Code Used
 
@@ -190,6 +222,12 @@ From the "I Think Therefore I blog" project I've used a lot of inspiration and a
 
 From a comment on [Stackoverflow](https://stackoverflow.com/questions/2662039/keep-background-image-fixed-during-scroll-using-css):
 - Fixed background image 
+
+From Codemy "Create a Simple Blog with Python and Django" [video playlist](https://www.youtube.com/playlist?list=PLCC34OHNcOtr025c1kHSPrnP18YPB-NFi):
+- Add Blog Post
+- Style Django Forms With Bootstrap
+- Update and Edit Blog Post
+- Delete Blog Post
 
 ### Content
 

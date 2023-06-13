@@ -14,7 +14,9 @@
                         <div class="image-container">
                             <!-- The featured image URL goes in the src attribute -->
                             {% if "placeholder" in post.featured_image.url %}
-                            <img class="card-img" src="https://res.cloudinary.com/dohlebn4a/image/upload/v1686340872/header_liwt82.png" width="100%">
+                            <img class="card-img"
+                                src="https://res.cloudinary.com/dohlebn4a/image/upload/v1686340872/header_liwt82.png"
+                                width="100%">
                             {% else %}
                             <img class="card-img" src=" {{ post.featured_image.url }}" width="100%">
                             {% endif %}
@@ -24,8 +26,9 @@
                         <!-- Post title goes in these h1 tags -->
                         <h2 class="post-title post-title-style">{{ post.title }}</h2>
                         <!-- Post author goes before the | the post's created date goes after -->
-                        <p class="post-meta italic-style p-margin"><a class="remove-underline" href="#!"><span class="username-colour">
-                            {{ post.author }}</span></a> {{ post.created_on }}</p>
+                        <p class="post-meta italic-style p-margin"><a class="remove-underline" href="#!"><span
+                                    class="username-colour">
+                                    {{ post.author }}</span></a> {{ post.created_on }}</p>
                     </div>
                 </div>
             </div>
@@ -54,10 +57,12 @@
                                         {% endif %}
                                     </form>
                                     {% else %}
-                                    <span class="text-secondary icon-size"><i class="far fa-heart likes-icon"></i></span>
+                                    <span class="text-secondary icon-size"><i
+                                            class="far fa-heart likes-icon"></i></span>
                                     {% endif %}
                                     <!-- The number of likes goes before the closing strong tag -->
-                                    <span class="text-secondary text-muted h6 icon-size no-italics">{{ post.number_of_likes }}
+                                    <span class="text-secondary text-muted h6 icon-size no-italics">
+                                        {{ post.number_of_likes }}
                                     </span>
                                 </strong>
                             </div>
@@ -112,12 +117,14 @@
 
                         <h3>Leave a comment:</h3>
                         <p class="p-margin italic-style ">Posting as: <span class="username-colour">
-                            {{ user.username }}</span></p>
-                        <form method="post" style="margin-top: 1.3em;">
-                            {{ comment_form | crispy }}
-                            {% csrf_token %}
-                            <button type="submit" class="btn-signup btn btn-dark">Submit</button>
-                        </form>
+                                {{ user.username }}</span></p>
+                        <div class="form-group">
+                            <form method="post" style="margin-top: 1.3em;">
+                                {{ comment_form | crispy }}
+                                {% csrf_token %}
+                                <button type="submit" class="btn-style btn btn-dark btn-style">Submit</button>
+                            </form>
+                        </div>
                         {% endif %}
                         {% endif %}
                     </div>

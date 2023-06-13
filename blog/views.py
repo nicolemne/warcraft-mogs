@@ -3,7 +3,7 @@ from django.views.generic import View, CreateView, ListView, UpdateView, DeleteV
 from django.http import HttpResponseRedirect
 from django.contrib import messages
 from .models import Post
-from .forms import CommentForm
+from .forms import CommentForm, UploadForm
 
 
 class PostList(ListView):
@@ -97,5 +97,5 @@ class UploadPost(CreateView):
     Allows user to create a post
     '''
     model = Post
+    form_class = UploadForm
     template_name = 'upload_post.html'
-    fields = '__all__'

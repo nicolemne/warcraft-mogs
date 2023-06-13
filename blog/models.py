@@ -23,7 +23,7 @@ class Post(models.Model):
     class Meta:
         ordering = ['-created_on']
 
-    def __stri__(self):
+    def __str__(self):
         return self.title
 
     def number_of_likes(self):

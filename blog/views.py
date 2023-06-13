@@ -1,12 +1,15 @@
 from django.shortcuts import render, get_object_or_404, reverse
-from django.views import generic, View
+from django.views.generic import View, CreateView, ListView, UpdateView, DeleteView  # noqa
 from django.http import HttpResponseRedirect
 from django.contrib import messages
 from .models import Post
 from .forms import CommentForm
 
 
-class PostList(generic.ListView):
+class PostList(ListView):
+    '''
+    Displays all approved posts in a list on the home page (index.html)
+    '''
     model = Post
     queryset = Post.objects.filter(status=1).order_by('-created_on')
     template_name = 'index.html'
@@ -14,6 +17,10 @@ class PostList(generic.ListView):
 
 
 class PostDetail(View):
+    '''
+    The view to display a posts and comments, as well as 
+    approving comments
+    '''
 
     def get(self, request, slug, *args, **kwargs):
         queryset = Post.objects.filter(status=1)
@@ -70,6 +77,10 @@ class PostDetail(View):
 
 
 class PostLike(View):
+    '''
+    View to display if the post is liked
+    '''
+
     def post(self, request, slug):
         post = get_object_or_404(Post, slug=slug)
 
@@ -79,3 +90,12 @@ class PostLike(View):
             post.likes.add(request.user)
 
         return HttpResponseRedirect(reverse('post_detail', args=[slug]))
+
+
+class UploadPost(CreateView):
+    '''
+    Allows user to create a post
+    '''
+    model = Post
+    template_name = 'upload_post.html'
+    fields = '__all__'

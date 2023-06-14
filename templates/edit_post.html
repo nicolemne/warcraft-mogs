@@ -4,6 +4,7 @@
 {% block content %}
 
 {% if user.is_authenticated %}
+{% if user.id == post.author.id %}
 
 <div class="container">
     <div class="transparent-background">
@@ -31,5 +32,6 @@
     </div>
   </div>
 
+{% endif %}
 {% endif %}
 {% endblock %}

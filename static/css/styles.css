@@ -12626,6 +12626,10 @@ header.masthead .post-heading .meta a {
   margin-bottom: 0px;
 }
 
+.icon-white {
+  color: #fff;
+}
+
 /* -----------------------  Post.detail */
 .content-container {
   margin-left: 10%;
@@ -12708,4 +12712,14 @@ header.masthead .post-heading .meta a {
 
 .delete-post-style {
   margin-bottom: 1em;
+}
+
+/* ----------------------- Post List category styling */
+.category-style {
+  color: #5688a3;
+}
+
+/* ----------------------- Post List category styling */
+.edit_delete {
+  font-size: 15px;
 }

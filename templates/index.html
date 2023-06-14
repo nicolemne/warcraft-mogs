@@ -18,12 +18,15 @@
                 </div>
                 <a href="{% url 'post_detail' post.slug %}">
                     <h2 class="post-title post-title-style">{{ post.title }}</h2>
-                    <h3 class="post-subtitle">{{ post.excerpt }}</h3>
+                    <h3 class="post-subtitle">{{ post.description }}</h3>
                 </a>
                 <p class="post-meta">
                     Posted by
                     <a href="#!"><span class="username-colour">{{ post.author }}</span></a>
                     {{ post.created_on }}
+                    <br>
+                    <span class="category-style"><small>#{{ post.category }}</small></span>
+                    <br>
                     <br>
                     <span class="text-muted h6 no-italics">
                         <i class="far fa-heart likes-icon"></i>

@@ -1,5 +1,12 @@
-from .models import Comment, Post
+from .models import Comment, Post, Category
 from django import forms
+
+
+category_choices = Category.objects.all().values_list('name', 'name')
+category_list = []
+
+for item in category_choices:
+    category_list.append(item)
 
 
 class UploadForm(forms.ModelForm):
@@ -8,13 +15,14 @@ class UploadForm(forms.ModelForm):
     '''
     class Meta:
         model = Post
-        fields = ('title', 'content', 'excerpt', 'featured_image',)
+        fields = ('title', 'content', 'description', 'category', 'featured_image',)
 
         widgets = {
             'title': forms.TextInput(attrs={'class': 'form-control',
                                             'placeholder': 'Title'}),
             'content': forms.Textarea(attrs={'class': 'form-control',
                                              'placeholder': 'Write something...'}),
+            'category': forms.Select(choices=category_list, attrs={'class': 'form-control'}),
         }
 
 

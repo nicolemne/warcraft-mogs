@@ -111,7 +111,7 @@ class EditPost(UpdateView):
     '''
     model = Post
     template_name = 'edit_post.html'
-    fields = ['title', 'content', 'excerpt',]
+    fields = ['title', 'content', 'description', 'category',]
 
 
 class DeletePost(DeleteView):

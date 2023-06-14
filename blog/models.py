@@ -18,10 +18,11 @@ class Post(models.Model):
     updated_on = models.DateTimeField(auto_now=True)
     content = models.TextField()
     featured_image = CloudinaryField('image', default='placeholder')
-    excerpt = models.CharField(max_length=200, blank=True)
+    description = models.CharField(max_length=200, blank=True)
     created_on = models.DateTimeField(auto_now_add=True)
     status = models.IntegerField(choices=STATUS, default=0)
     likes = models.ManyToManyField(User, related_name='blog_likes', blank=True)
+    category = models.CharField(max_length=200, default="undefined")
 
     class Meta:
         ordering = ['-created_on']
@@ -53,3 +54,16 @@ class Comment(models.Model):
 
     def __str__(self):
         return f"Comment {self.body} by {self.name}"
+
+
+class Category(models.Model):
+    '''
+    Category model to display categories to find certain posts
+    '''
+    name = models.CharField(max_length=200, unique=True)
+
+    def __str__(self):
+        return self.name
+    
+    def get_absolute_url(self):
+        return reverse("home")

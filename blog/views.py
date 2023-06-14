@@ -13,12 +13,12 @@ class PostList(ListView):
     model = Post
     queryset = Post.objects.filter(status=1).order_by('-created_on')
     template_name = 'index.html'
-    paginate_by = 6
+    paginate_by = 3
 
 
 class PostDetail(View):
     '''
-    The view to display a posts and comments, as well as 
+    The view to display a posts and comments, as well as
     approving comments
     '''
 
@@ -80,7 +80,6 @@ class PostLike(View):
     '''
     View to display if the post is liked
     '''
-
     def post(self, request, slug):
         post = get_object_or_404(Post, slug=slug)
 
@@ -99,3 +98,16 @@ class UploadPost(CreateView):
     model = Post
     form_class = UploadForm
     template_name = 'upload_post.html'
+
+    def form_valid(self, form):
+        form.instance.author = self.request.user
+        return HttpResponseRedirect(reverse('home'))
+
+
+class EditPost(UpdateView):
+    '''
+    Allows user to edit a post
+    '''
+    model = Post
+    template_name = 'edit_post.html'
+    fields = ['title', 'content', 'excerpt',]

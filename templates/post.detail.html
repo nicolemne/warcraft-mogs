@@ -12,7 +12,6 @@
                 <div class="row row-margin g-0">
                     <div class="row row-margin gx-4 gx-lg-5 justify-content-center">
                         <div class="image-container">
-                            <!-- The featured image URL goes in the src attribute -->
                             {% if "placeholder" in post.featured_image.url %}
                             <img class="card-img"
                                 src="https://res.cloudinary.com/dohlebn4a/image/upload/v1686340872/header_liwt82.png"
@@ -23,12 +22,12 @@
                         </div>
                     </div>
                     <div class="col-md-10 col-lg-8 col-xl-7 post-title-author">
-                        <!-- Post title goes in these h1 tags -->
                         <h2 class="post-title post-title-style">{{ post.title }}</h2>
-                        <!-- Post author goes before the | the post's created date goes after -->
                         <p class="post-meta italic-style p-margin"><a class="remove-underline" href="#!"><span
                                     class="username-colour">
                                     {{ post.author }}</span></a> {{ post.created_on }}</p>
+                                    <a href="{% url 'edit_post' post.slug %}">Edit</a>
+                                    <a href="">Delete</a>
                     </div>
                 </div>
             </div>
@@ -37,8 +36,6 @@
             <div class="row row-margin">
                 <div class="col card mb-4  mt-3 left top remove-border">
                     <div class="card-body">
-                        <!-- The post content goes inside the card-text. -->
-                        <!-- Use the | safe filter inside the template tags -->
                         <p class="card-text">
                             {{ post.content | safe }}
                         </p>
@@ -60,7 +57,6 @@
                                     <span class="text-secondary icon-size"><i
                                             class="far fa-heart likes-icon"></i></span>
                                     {% endif %}
-                                    <!-- The number of likes goes before the closing strong tag -->
                                     <span class="text-secondary text-muted h6 icon-size no-italics">
                                         {{ post.number_of_likes }}
                                     </span>
@@ -70,7 +66,6 @@
                                 {% with comments.count as total_comments %}
                                 <strong class="text-secondary text-muted h6 icon-size no-italics"><i
                                         class="fa-regular fa-comment comments-icon"></i>
-                                    <!-- Our total_comments variable goes before the closing strong tag -->
                                     {{ total_comments }}</strong>
                                 {% endwith %}
                             </div>
@@ -87,22 +82,17 @@
                 <div class="col-md-8 card mb-4 mt-3 remove-border">
                     <h3>Comments:</h3>
                     <div class="card-body">
-                        <!-- We want a for loop inside the empty control tags to iterate through each comment in comments -->
                         {% for comment in comments %}
                         <div class="comments italic-style" style="padding: 10px;">
                             <p class="font-weight-bold">
-                                <!-- The commenter's name goes here. Check the model if you're not sure what that is -->
                                 <span class="username-colour">{{ comment.name }}</span>
                                 <span class="text-muted font-weight-normal">
-                                    <!-- The comment's created date goes here -->
                                     {{ comment.created_on }}
                                 </span> wrote:
                             </p>
-                            <!-- The body of the comment goes before the | -->
                             <span class="no-italics">{{ comment.body | linebreaks }}</span>
                             <hr>
                         </div>
-                        <!-- Our for loop ends here -->
                         {% endfor %}
                     </div>
                 </div>

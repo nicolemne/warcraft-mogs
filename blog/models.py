@@ -18,7 +18,7 @@ class Post(models.Model):
     updated_on = models.DateTimeField(auto_now=True)
     content = models.TextField()
     featured_image = CloudinaryField('image', default='placeholder')
-    excerpt = models.TextField(blank=True)
+    excerpt = models.CharField(max_length=200, blank=True)
     created_on = models.DateTimeField(auto_now_add=True)
     status = models.IntegerField(choices=STATUS, default=0)
     likes = models.ManyToManyField(User, related_name='blog_likes', blank=True)
@@ -33,7 +33,7 @@ class Post(models.Model):
         return self.likes.count()
 
     def get_absolute_url(self):
-        return reverse('post_detail')
+        return reverse("post_detail", kwargs={"slug": self.slug})
 
 
 class Comment(models.Model):

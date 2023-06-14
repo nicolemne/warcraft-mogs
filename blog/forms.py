@@ -8,7 +8,7 @@ class UploadForm(forms.ModelForm):
     '''
     class Meta:
         model = Post
-        fields = ('title', 'content', 'featured_image',)
+        fields = ('title', 'content', 'excerpt', 'featured_image',)
 
         widgets = {
             'title': forms.TextInput(attrs={'class': 'form-control',

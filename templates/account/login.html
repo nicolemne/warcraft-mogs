@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 
+{% load crispy_forms_tags %}
 {% load i18n %}
 {% load account socialaccount %}
 
@@ -11,7 +12,7 @@
   <div class="transparent-background">
     <div class="row g-0">
       <div class="row gx-4 gx-lg-5 justify-content-center">
-        <h2>{% trans "Sign In" %}</h2>
+        <h2 class="title-style">{% trans "Sign In" %}</h2>
 
         <p>{% blocktrans %} Welcome to Warcraft Mogs! <br><br> To upload your transmog, leave a comment or like a post,
           please
@@ -20,7 +21,7 @@
         </p>
         <form class="login" method="POST" action="{% url 'account_login' %}">
           {% csrf_token %}
-          {{ form.as_p }}
+          {{ form | crispy }}
           {% if redirect_field_value %}
           <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
           {% endif %}

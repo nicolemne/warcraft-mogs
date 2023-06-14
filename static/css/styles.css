@@ -12679,7 +12679,24 @@ header.masthead .post-heading .meta a {
 /* ----------------------- Button styling*/
 .btn-style {
   margin-top: 15px;
-  margin-bottom: 15px;
-  background-color: #36244d;
+  margin-bottom: 4em;
+  background-color: #5b3987;
   border: solid 1px #fff;
+}
+
+/* ----------------------- Username styling*/
+.username-style {
+  color: #a875d9;
+}
+
+/* ----------------------- Title styling*/
+.title-style {
+  margin-top: 1em;
+  color: #9c74c2;
+}
+
+/* ----------------------- Edit Post Image styling*/
+.edit-post-image {
+  margin-top: 2em;
+  margin-bottom: 2em;
 }

@@ -41,7 +41,7 @@
                     <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4"
                         href="{% url 'upload_post' %}">Upload Post</a></li>
                     <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4"
-                            href="{% url 'account_logout' %}">Logout</a></li>
+                            href="{% url 'account_logout' %}">Sign out | <span class="username-style">{{ request.user.username }}</span></a></li>
                     {% else %}
                     <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4"
                             href="{% url 'account_signup' %}">Register</a></li>

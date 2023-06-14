@@ -9,9 +9,9 @@
     <div class="transparent-background">
       <div class="row">
         <div class="col-md-8 mt-3 offset-md-2">
-          <h2>Upload Post</h2>
+          <h2 class="title-style">Upload Post</h2>
           <br>
-          <form method="post" action="">
+          <form method="POST" action="">
             {% csrf_token %}
             {{ form | crispy }}
             <button class="btn btn-dark btn-style" type="submit">Submit</button>

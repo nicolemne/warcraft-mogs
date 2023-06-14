@@ -2,6 +2,7 @@ from django.shortcuts import render, get_object_or_404, reverse
 from django.views.generic import View, CreateView, ListView, UpdateView, DeleteView  # noqa
 from django.http import HttpResponseRedirect
 from django.contrib import messages
+from django.urls import reverse_lazy
 from .models import Post
 from .forms import CommentForm, UploadForm
 
@@ -111,3 +112,12 @@ class EditPost(UpdateView):
     model = Post
     template_name = 'edit_post.html'
     fields = ['title', 'content', 'excerpt',]
+
+
+class DeletePost(DeleteView):
+    '''
+    Allows user to delete a post
+    '''
+    model = Post
+    template_name = 'delete_post.html'
+    success_url = reverse_lazy('home')

@@ -26,8 +26,8 @@
                         <p class="post-meta italic-style p-margin"><a class="remove-underline" href="#!"><span
                                     class="username-colour">
                                     {{ post.author }}</span></a> {{ post.created_on }}</p>
-                                    <a href="{% url 'edit_post' post.slug %}">Edit</a>
-                                    <a href="">Delete</a>
+                                    <a href="{% url 'edit_post' post.slug %}">Edit</a> |
+                                    <a href="{% url 'delete_post' post.slug %}">Delete</a>
                     </div>
                 </div>
             </div>

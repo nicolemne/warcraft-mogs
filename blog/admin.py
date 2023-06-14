@@ -26,4 +26,3 @@ class CommentAdmin(admin.ModelAdmin):
 
 
 admin.site.register(Category)
-

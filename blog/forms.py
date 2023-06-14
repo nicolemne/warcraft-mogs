@@ -1,5 +1,6 @@
 from .models import Comment, Post, Category
 from django import forms
+from django_summernote.widgets import SummernoteWidget, SummernoteInplaceWidget
 
 
 category_choices = Category.objects.all().values_list('name', 'name')
@@ -15,13 +16,30 @@ class UploadForm(forms.ModelForm):
     '''
     class Meta:
         model = Post
-        fields = ('title', 'content', 'description', 'category', 'featured_image',)
+        fields = ('title', 'content', 'description',
+                  'category', 'featured_image',)
 
         widgets = {
             'title': forms.TextInput(attrs={'class': 'form-control',
                                             'placeholder': 'Title'}),
-            'content': forms.Textarea(attrs={'class': 'form-control',
-                                             'placeholder': 'Write something...'}),
+            'content': SummernoteWidget(),
+            'category': forms.Select(choices=category_list, attrs={'class': 'form-control'}),
+        }
+
+
+class EditForm(forms.ModelForm):
+    '''
+    Edits the post
+    '''
+    class Meta:
+        model = Post
+        fields = ('title', 'content', 'description',
+                  'category', 'featured_image',)
+
+        widgets = {
+            'title': forms.TextInput(attrs={'class': 'form-control',
+                                            'placeholder': 'Title'}),
+            'content': SummernoteWidget(),
             'category': forms.Select(choices=category_list, attrs={'class': 'form-control'}),
         }
 

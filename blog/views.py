@@ -4,7 +4,7 @@ from django.http import HttpResponseRedirect
 from django.contrib import messages
 from django.urls import reverse_lazy
 from .models import Post
-from .forms import CommentForm, UploadForm
+from .forms import CommentForm, UploadForm, EditForm
 
 
 class PostList(ListView):
@@ -106,12 +106,12 @@ class UploadPost(CreateView):
 
 
 class EditPost(UpdateView):
-    '''
-    Allows user to edit a post
-    '''
     model = Post
     template_name = 'edit_post.html'
-    fields = ['title', 'content', 'description', 'category',]
+    form_class = EditForm
+
+    def get_success_url(self):
+        return reverse('home')
 
 
 class DeletePost(DeleteView):

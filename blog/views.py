@@ -1,5 +1,6 @@
 from django.shortcuts import render, get_object_or_404, reverse
 from django.views.generic import View, CreateView, ListView, UpdateView, DeleteView  # noqa
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.http import HttpResponseRedirect
 from django.utils.text import slugify
 from django.utils.crypto import get_random_string
@@ -94,7 +95,7 @@ class PostLike(View):
         return HttpResponseRedirect(reverse('post_detail', args=[slug]))
 
 
-class UploadPost(CreateView):
+class UploadPost(LoginRequiredMixin, CreateView):
     '''
     Allows user to create a post
     '''

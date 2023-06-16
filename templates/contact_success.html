@@ -1,14 +1,17 @@
 {% extends "base.html" %}
 
-{% load crispy_forms_tags %}
-
 {% block content %}
 
-<div class="container">
-    <div class="transparent-background">
-        <div class="col-md-8 mt-3 offset-md-2">
-            <div class="row gx-4 gx-lg-5 justify-content-center">
-                <h2 class="title-style contact-success">Your message was submitted successfully!</h2>
+<div class="container px-4 px-lg-5">
+    <div class="row gx-4 gx-lg-5 justify-content-center transparent-background">
+        <div class="col-md-10 col-lg-8 col-xl-7">
+            <h2 class="title-style contact-success">Your request was submitted successfully!</h2>
+            <div class="post-preview">
+                <div class="image-container">
+                    <img class="card-img success-img"
+                        src="https://res.cloudinary.com/dohlebn4a/image/upload/v1686941501/success_k8f7ze.png"
+                        alt="Thumbs up!">
+                </div>
             </div>
         </div>
     </div>

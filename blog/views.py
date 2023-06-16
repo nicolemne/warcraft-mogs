@@ -102,7 +102,6 @@ class UploadPost(LoginRequiredMixin, CreateView):
     model = Post
     form_class = UploadForm
     template_name = 'upload_post.html'
-    success_url = reverse_lazy('home')
 
     def form_valid(self, form):
         '''
@@ -143,8 +142,10 @@ class EditPost(UpdateView):
     template_name = 'edit_post.html'
     form_class = EditForm
 
-    def get_success_url(self):
-        return reverse('home')
+    def form_valid(self, form):
+        self.object = form.save()
+
+        return HttpResponseRedirect(reverse('post_detail', args=[self.object.slug]))
 
 
 class DeletePost(DeleteView):

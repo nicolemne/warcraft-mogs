@@ -1,14 +1,17 @@
 # WARCRAFT MOGS
 
-👩🏻‍💻 View an example of this section [here](https://github.com/kera-cudmore/Bully-Book-Club#bully-book-club-website)
+Welcome to Warcraft Mogs README.
 
-Add a Blurb about the site here, what does it do, why did you build it?
+I am a huge fan of the online MMORPG World of Warcraft and have been a loyal player since the early beginnings in 2005. World of Warcraft is not only a game to me, but also a means to express my creativity, by creating cool armour sets - also known as transmogs (mog for short). Transmog is one of my favourite aspects of the game, and I can spend many, many hours just picking out the right shade on a pair of boots. There is a lot of time needed to put in to make these transmogs, as you need to collect all pieces you want to complete your wardrobe. I know there are a lot of like-minded people who enjoy the collecting and creativity that comes with it, as well as wanting to share their creations with other people. 
 
-Add an image of the finished site here. I like to use [amiresponsive](https://ui.dev/amiresponsive) to get an image of my site on all device sizes, and amiresponsive allows you to click links on the page and scroll, so each device can show a different element of your site.
+While deciding what I wanted to do with my fourth project with Code Institute, my boyfriend Dan suggested I do a blog to showcase my own transmogs. I instantly fell in love with the idea and was really excited to begin with this project.
 
-Add a link to the live site here, for Milestone 1 this will be the GitHub Pages Link from when you deployed the site.
+I hope you enjoy the website as much as enjoyed making it! It's been a roller coaster of emotions, but in the end, I made it through! 
 
-If you want to add optional [shields.io](https://shields.io) badges to your README, I like to add them to this section.
+![amiresponsive](/media/images/...png)
+
+Live site:
+[here.]()
 
 ---
 
@@ -56,7 +59,43 @@ If you want to add optional [shields.io](https://shields.io) badges to your READ
 
 ## User Experience (UX)
 
-👩🏻‍💻 View an example of a completed user experience section [here](https://github.com/kera-cudmore/Bully-Book-Club#user-experience-ux)
+### Initial Discussion
+
+Warcraft Mogs is a website developed for transmog enthusiasts in the game World of Warcraft. On this website, users can share their creations and get inspiration from others' work too. 
+
+#### Key information for the site
+
+* A place to showcase creativity
+* Browse blog posts containing different armour sets
+* Give feedback and participate in the comment section
+* Like posts
+
+### User Stories
+
+#### Client Goals
+
+* To be able to view the site on a range of device sizes.
+* To inspire creativity 
+* To share creations
+* To give feedback 
+
+#### First-Time Visitor Goals
+
+* I want to see other people's creations
+* I want to share my own creations
+* I want to express my appreciation
+
+#### Returning Visitor Goals
+
+* I want to see what other people think of my creations
+* I want to stay up to date with new posts
+* I want to be active on the blog 
+
+#### Frequent Visitor Goals
+
+* I want to give feedback and discuss ideas with other users
+* I want to build up my portfolio of my own creations
+
 
 ## **Agile Methodology**
 
@@ -66,26 +105,26 @@ The Agile Methodology was used to develop this website. It was implemented throu
 ### User Stories
 
 #### Iteration 1
-- As a Site Admin I can create draft posts so that I can finish writing the content at a later time.
-- As a Site Admin I can approve or disapprove comments so that I can filter out objectionable comments.
-- As a Site Admin I can create, read, update and delete posts so that I can manage my blog content.
-- As a Site User I can view a paginated list of posts so that I can select which post I want to view.
-- As a user I can view all posts in a list so that I can easily find a post to view.
+- As a Site Admin, I can create draft posts so that I can finish writing the content at a later time.
+- As a Site Admin, I can approve or disapprove comments so that I can filter out objectionable comments.
+- As a Site Admin, I can create, read, update and delete posts so that I can manage my blog content.
+- As a Site User, I can view a paginated list of posts so that I can select which post I want to view.
+- As a user, I can view all posts in a list so that I can easily find a post to view.
 
 #### Iteration 2
 
-- As a Site User I can click on a post so that I can read the full text. 
-- As a Site User I can like or unlike a post so that I can interact with the content.
-- As a Site User / Admin I can view the number of likes on each post so that I can see which post is the most popular.
-- As a Site User and/or Admin I can view comments on an individual post so that I can read the conversation.  
-- As a Site User I can leave comments on a post so that I can be involved in the conversation.
+- As a Site User, I can click on a post so that I can read the full text. 
+- As a Site User, I can like or unlike a post so that I can interact with the content.
+- As a Site User, / Admin I can view the number of likes on each post so that I can see which post is the most popular.
+- As a Site User, and/or Admin I can view comments on an individual post so that I can read the conversation.  
+- As a Site User, I can leave comments on a post so that I can be involved in the conversation.
 
 #### Iteration 3
 
-- As a site user or admin I can edit/update my blog post so that I can make a change in the already submitted post.
-- As a site user I can delete a blog post so that the post is removed from the blog.
-- As a Site User I can register an account so that I can comment and like.
-- As a site user I can upload my own post so that I can share my creation.
+- As a site user or admin, I can edit/update my blog post so that I can make a change in the already submitted post.
+- As a site user, I can delete a blog post so that the post is removed from the blog.
+- As a Site User, I can register an account so that I can comment and like.
+- As a site user, I can upload my own post so that I can share my creation.
 
 ### Future Implementations (backlog):
 
@@ -105,28 +144,26 @@ With the Kanban board, the project was split into four sections;
 
 ## Design
 
-👩🏻‍💻 View an example of a completed design section [here](https://github.com/kera-cudmore/earth-day-hackathon-2022#Design)
-
 ### Colour Scheme
 
-The purple colours and aestethic has been generated from the header image.
+The purple colours and aesthetic has been generated from the header image.
 
 ![Purple](media/images/purple-colour.png)
 
-The purple colours and aestethic has been generated from the background image.
+The purple colours and aesthetic has been generated from the background image.
 
 ![Green](media/images/green-colour.png)
 
 ### Typography
 
-All fonts used were already pre-installed with the Bootstrap theme I have chose for this project;
+All fonts used were already pre-installed with the Bootstrap theme I have chosen for this project;
 - [Bootstrap Clean Blog](https://startbootstrap.com/theme/clean-blog)
 
 ### Imagery
 
 All images are screenshots taken from World of Warcraft content: Copyright ©2004 Blizzard Entertainment, Inc. All rights reserved. World of Warcraft, Warcraft and Blizzard Entertainment are trademarks or registered trademarks of Blizzard Entertainment, Inc. in the U.S. and/or other countries.
 
-The header and background image is screenshots taken from in game World of Warcraft. It is consistent throughout all pages.
+The header and background image are screenshots taken from in-game World of Warcraft. It is consistent throughout all pages.
 
 Header
 
@@ -151,8 +188,8 @@ This section can be used to explain what pages your site is made up of.
 
 ### General features on each page
 
-All pages features a navigation bar with access to the following pages: Home, About, Contact, Register, Sign in. If you are already logged in, you can access the pages Upload Post and Sign out. 
-The footer is also present in all of the pages, with links to my social media accounts and GitHub. 
+All pages feature a navigation bar with access to the following pages: Home, About, Contact, Register and Sign in. If you are already logged in, you can access the pages Upload Post and Sign Out. 
+The footer is also present on all of the pages, with links to my social media accounts and GitHub. 
 
 ### Future Implementations
 
@@ -166,15 +203,12 @@ More features and ideas may be added in the future.
 
 ### Accessibility
 
-Be an amazing developer and get used to thinking about accessibility in all of your projects!
+I have tried my best to be mindful of accessibility, and the steps I've taken for this are the following:
 
-This is the place to make a note of anything you have done with accessibility in mind. Some examples include:
-
-Have you used icons and added aria-labels to enable screen readers to understand these?
-Have you ensured your site meets the minimum contrast requirements?
-Have you chosen fonts that are dyslexia/accessible friendly?
-
-Code Institute have an amazing channel for all things accessibility (a11y-accessibility) I would highly recommend joining this channel as it contains a wealth of information about accessibility and what we can do as developers to be more inclusive.
+- Descriptive information about every image on the gallery page
+- Aria labels to the social media links
+- Chose a good colour contrast throughout the website
+- Semantic HTML
 
 ## Technologies Used
 
@@ -221,19 +255,19 @@ You can find the instructions in a Google Docs [here](https://docs.google.com/do
 ### 2. Create your Heroku App:
 
 - Navigate to the Heroku website
-- Create a Heroku account by entering your email address and a password (or login if you have one already).
+- Create a Heroku account by entering your email address and a password (or log in if you have one already).
 - Activate the account through the authentication email sent to your email account
-- Click the new button on the top right corner of the screen and select create a new app from the dropdown menu.
+- Click the new button on the top right corner of the screen and select Create a new app from the dropdown menu.
 - Enter a unique name for the application.
 - Select the appropriate region for the application.
-- Click create app
+- Click Create app
 - In the Heroku dashboard click on the Resources tab
 - Scroll down to Add-Ons, search for and select 'Heroku Postgres'
 - In the Settings tab, scroll down to 'Reveal Config Vars' and copy the text in the box beside DATABASE_URL.
 
 ### 3. Set up Environment Variables:
 
-- In you IDE create a new env.py file in the top level directory
+- In your IDE, create a new env.py file in the top-level directory
 - Add env.py to the .gitignore file
 - In env.py import the os library
 - In env.py add `os.environ["DATABASE_URL"]` = "Paste in the text link copied above from Heroku DATABASE_URL"
@@ -253,7 +287,7 @@ if os.path.isfile("env.py"):
 ```
 
 - Remove the default insecure secret key in settings.py and replace with the link to the secret key variable in Heroku by typing: SECRET_KEY = os.environ.get(SECRET_KEY)
-- Comment out the DATABASES section in settings.py and replace with:
+- Comment out the DATABASES section in settings.py and replace it with:
 
 ```
 DATABASES = {
@@ -292,16 +326,16 @@ DEFAULT_FILE_STORAGE =
 - Make an initial commit and push the code to the GitHub Repository. `git add . git commit -m "Initial deployment" git push`
 
 ### 5. Heroku Deployment:
-- Click Deploy tab in Heroku
-- In the 'Deployment method' section select 'Github' and click the 'connect to Github' button to confirm.
+- Click the Deploy tab in Heroku
+- In the 'Deployment method' section select 'Github' and click the 'Connect to GitHub' button to confirm.
 - In the 'search' box enter the Github repository name for the project
-- Click search and then click connect to link the heroku app with the Github repository. The box will confirm that heroku is connected to the repository.
+- Click search and then click connect to link the Heroku app with the GitHub repository. The box will confirm that Heroku is connected to the repository.
 
 ### 6. Final Deployment
 In the IDE:
 
 - When development is complete change the debug setting to: DEBUG = False in settings.py
-- In Heroku settings config vars change the DISABLE_COLLECTSTATIC value to 0
+- In Heroku settings config vars, change the DISABLE_COLLECTSTATIC value to 0
 - Because DEBUG must be switched to True for development and False for production it is recommended that only manual deployment is used in Heroku.
 - To manually deploy click the button 'Deploy Branch'. The default 'main' option in the dropdown menu should be selected in both cases. When the app is deployed a message 'Your app was successfully deployed' will be shown. Click 'view' to see the deployed app in the browser.
 
@@ -359,10 +393,6 @@ From Codemy "Create a Simple Blog with Python and Django" [video playlist](https
 ### Content
 
 I have written all code in this project myself, of course with the help of different resources such as those named in the Credits and Code Used. Tutor Support, as well as two fellow coder friends - Emelie and Joseph has assisted me when I have been stuck and needed guidance.
-
-###  Media
-
-If you have used any media on your site (images, audio, video etc) you can credit them here. I like to link back to the source where I found the media, and include where on the site the image is used.
   
 ###  Acknowledgments
 

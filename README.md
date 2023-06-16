@@ -59,17 +59,33 @@ If you want to add optional [shields.io](https://shields.io) badges to your READ
 👩🏻‍💻 View an example of a completed user experience section [here](https://github.com/kera-cudmore/Bully-Book-Club#user-experience-ux)
 
 ## **Agile Methodology**
----
+
 The Agile Methodology was used to develop this website. It was implemented through GitHub and the Project/Kanban Board: 
 [Warcraft Mogs](https://github.com/users/nicolemne/projects/3).
 
 ### User Stories
 
 #### Iteration 1
+- As a Site Admin I can create draft posts so that I can finish writing the content at a later time.
+- As a Site Admin I can approve or disapprove comments so that I can filter out objectionable comments.
+- As a Site Admin I can create, read, update and delete posts so that I can manage my blog content.
+- As a Site User I can view a paginated list of posts so that I can select which post I want to view.
+- As a user I can view all posts in a list so that I can easily find a post to view.
 
 #### Iteration 2
 
+- As a Site User I can click on a post so that I can read the full text. 
+- As a Site User I can like or unlike a post so that I can interact with the content.
+- As a Site User / Admin I can view the number of likes on each post so that I can see which post is the most popular.
+- As a Site User and/or Admin I can view comments on an individual post so that I can read the conversation.  
+- As a Site User I can leave comments on a post so that I can be involved in the conversation.
+
 #### Iteration 3
+
+- As a site user or admin I can edit/update my blog post so that I can make a change in the already submitted post.
+- As a site user I can delete a blog post so that the post is removed from the blog.
+- As a Site User I can register an account so that I can comment and like.
+- As a site user I can upload my own post so that I can share my creation.
 
 ### Future Implementations (backlog):
 
@@ -81,10 +97,10 @@ With the Kanban board, the project was split into four sections;
 - Backlog (future additions)
 
 <details>
-<summary>Kanban board:</summary>
+<summary>Kanban board design:</summary>
 <br>
 
-![Kanban]()
+![Kanban](media/images/kanban.png)
 </details>
 
 ## Design
@@ -93,9 +109,13 @@ With the Kanban board, the project was split into four sections;
 
 ### Colour Scheme
 
-Add all information about your colour scheme for your site here. You can explain why you choose the colours you did?
+The purple colours and aestethic has been generated from the header image.
 
-I like to include a palette of the colour scheme here, my favourite site for creating a colour palette is [coolors](https://coolors.co/), but there are lots of other sites that also do the same thing, like [ColorSpace](https://mycolor.space/?hex=%23F5F5F5&sub=1), [Muzli Colors](https://colors.muz.li/), [Adobe Colour Wheel](https://color.adobe.com/create/color-wheel) and [Canva](https://www.canva.com/colors/color-palette-generator/) to name a few.
+![Purple](media/images/purple-colour.png)
+
+The purple colours and aestethic has been generated from the background image.
+
+![Green](media/images/green-colour.png)
 
 ### Typography
 
@@ -106,14 +126,22 @@ All fonts used were already pre-installed with the Bootstrap theme I have chose 
 
 All images are screenshots taken from World of Warcraft content: Copyright ©2004 Blizzard Entertainment, Inc. All rights reserved. World of Warcraft, Warcraft and Blizzard Entertainment are trademarks or registered trademarks of Blizzard Entertainment, Inc. in the U.S. and/or other countries.
 
+The header and background image is screenshots taken from in game World of Warcraft. It is consistent throughout all pages.
+
+Header
+
+![Header](media/images/header.png)
+
+Background
+
+![Header](media/images/bg.png)
+
 
 ### Wireframes
 
-Add the images or links for your wireframes here.
+The wireframe below is the general idea and vision I had for the website. It follows a basic structure that is the same throughout all pages of the website, with small modifications. 
 
-There are lots of different options to create your wireframes - Code Institute students can access [Balsamiq](https://balsamiq.com/) as part of the course.
-
-Some other options include [Figma](https://www.figma.com/), [AdobeXD](https://www.adobe.com/products/xd.html), [Sketch](https://www.sketch.com/?utm_source=google&utm_medium=cpc&adgroup=uxui&device=c&matchtype=e&utm_campaign=ADDICTMOBILE_SKETCH_GAD_DG_UK_T1_ALWAYS-ON_S_TRF_PROS_BRAND&utm_term=sketch&utm_source=google&utm_medium=cpc&utm_content=TOF_BRND__generic&hsa_acc=8710913982&hsa_cam=16831089317&hsa_grp=134620695759&hsa_ad=592060065319&hsa_src=g&hsa_tgt=kwd-14921750&hsa_kw=sketch&hsa_mt=e&hsa_net=adwords&hsa_ver=3&gclid=Cj0KCQjwr4eYBhDrARIsANPywCjRIFn93DMezYnsyE5Fic_8l8kynJtut0GYMU01TiohHjwziFtlH0gaAhteEALw_wcB) and [Mockup](https://apps.apple.com/us/app/mockup-sketch-ui-ux/id1527554407) to name just a few! Or you can even go old school and get those wireframes completed using pen and paper. Just snap an image of the completed wireframes to add the images to the README.
+![Wireframes](media/images/wireframes.png)
 
 ## Features
 
@@ -123,13 +151,18 @@ This section can be used to explain what pages your site is made up of.
 
 ### General features on each page
 
-If there is a feature that appears on all pages of your site, include it here. Examples of what to include would the the navigation, a footer and a favicon.
-
-I then like to add a screenshot of each page of the site here, i use [amiresponsive](https://ui.dev/amiresponsive) which allows me to grab an image of the site as it would be displayed on mobile, tablet and desktop, this helps to show the responsiveness of the site.
+All pages features a navigation bar with access to the following pages: Home, About, Contact, Register, Sign in. If you are already logged in, you can access the pages Upload Post and Sign out. 
+The footer is also present in all of the pages, with links to my social media accounts and GitHub. 
 
 ### Future Implementations
 
-What features would you like to implement in the future on your site? Would you like to add more pages, or create login functionality? Add these plans here.
+To expand this website further, I would like to add these future implementations:
+- The ability to enlarge the images in the detailed view
+- Create a user page, and the ability to view other user pages
+- Search field
+- Create drafts
+
+More features and ideas may be added in the future.
 
 ### Accessibility
 
@@ -164,6 +197,7 @@ Code Institute have an amazing channel for all things accessibility (a11y-access
 - [ElephantSQL](https://www.elephantsql.com/)
 - [Heroku](https://dashboard.heroku.com/login)
 - [Bootstrap Clean Blog](https://startbootstrap.com/theme/clean-blog)
+- [Canva](https://www.canva.com/)
 
 ## Deployment & Local Development
 
@@ -287,6 +321,7 @@ If you wish to clone my project, please see the following steps below:
 - Select the 'Clone' button
 - Copy the URL or download it as a ZIP file
 - Use git clone + the URL in your terminal, or unpack the ZIP containing the project
+
 
 ## Testing
 

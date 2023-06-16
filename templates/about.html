@@ -1,38 +1,37 @@
 {% extends "base.html" %}
 
+{% load crispy_forms_tags %}
+{% load i18n %}
+
+{% block head_title %}{% trans "Sign Out" %}{% endblock %}
+
 {% block content %}
+<div class="container">
+    <div class="transparent-background">
+        <div class="row">
+            <div class="col-md-8 mt-3 offset-md-2">
+                <h2 class="title-style">About Warcraft Mogs</h2>
+                <br>
+                <p class="about-style">Welcome to Warcraft Mogs, where fashion meets fantasy in the world of Warcraft! It's the place to be
+                    if you're tired of running around Azeroth looking like a mismatched goblin without the heroic
+                    charm. We get it, and we're here to help you unleash your inner fashionista!
+                    <br>
+                    <br>
+                    At Warcraft Mogs, we believe that looking fabulous while slaying dragons and saving the world is a
+                    top priority. We understand the struggles of finding the perfect helm to match your shoulder pads or
+                    the never-ending quest for that elusive pair of boots that screams, "I'm here to kick a** and look
+                    fabulous!"
+                    <br>
+                    <br>
+                    Our platform is your one-stop-shop for showing off your character's style, sharing your creative
+                    mogging masterpieces, and connecting with fellow players who appreciate the finer points of fashion
+                    in Azeroth. Join our community of dedicated fashion enthusiasts, where you'll find inspiration,
+                    encouragement, and maybe even a few laughs along the way.</p>
+                    <br>
+                    <br>
 
-<!-- Page Header-->
-<header class="masthead" style="background-image: url('assets/img/about-bg.jpg')">
-    <div class="container position-relative px-4 px-lg-5">
-        <div class="row gx-4 gx-lg-5 justify-content-center">
-            <div class="col-md-10 col-lg-8 col-xl-7">
-                <div class="page-heading">
-                    <h1>About Me</h1>
-                    <span class="subheading">This is what I do.</span>
-                </div>
             </div>
         </div>
     </div>
-</header>
-
-<!-- Main Content-->
-<main class="mb-4">
-    <div class="container px-4 px-lg-5">
-        <div class="row gx-4 gx-lg-5 justify-content-center">
-            <div class="col-md-10 col-lg-8 col-xl-7">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe nostrum ullam eveniet pariatur
-                    voluptates odit, fuga atque ea nobis sit soluta odio, adipisci quas excepturi maxime quae totam
-                    ducimus consectetur?</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius praesentium recusandae illo eaque
-                    architecto error, repellendus iusto reprehenderit, doloribus, minus sunt. Numquam at quae voluptatum
-                    in officia voluptas voluptatibus, minus!</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut consequuntur magnam, excepturi aliquid
-                    ex itaque esse est vero natus quae optio aperiam soluta voluptatibus corporis atque iste neque sit
-                    tempora!</p>
-            </div>
-        </div>
-    </div>
-</main>
-
+</div>
 {% endblock %}

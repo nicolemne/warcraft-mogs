@@ -106,7 +106,7 @@ body {
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   background-position: center;
-  background-image: url('https://res.cloudinary.com/dohlebn4a/image/upload/v1686342652/bg_rdgxfo.png');
+  background-image: url('https://res.cloudinary.com/dohlebn4a/image/upload/v1686928569/bg_xrwwic.png');
   background-attachment: fixed;
 }
 
@@ -12626,8 +12626,23 @@ header.masthead .post-heading .meta a {
   margin-bottom: 0px;
 }
 
-.icon-white {
+.icon-edit {
+  font-size: 20px;
+  padding-right: 10px;
   color: #fff;
+}
+
+.icon-delete {
+  font-size: 20px;
+  color: #fff;
+}
+
+.icon-edit:hover {
+  color: #607ff7;
+}
+
+.icon-delete:hover {
+  color: #a13232;
 }
 
 /* -----------------------  Post.detail */
@@ -12714,12 +12729,22 @@ header.masthead .post-heading .meta a {
   margin-bottom: 1em;
 }
 
-/* ----------------------- Post List category styling */
+/* ----------------------- Category styling */
 .category-style {
-  color: #5688a3;
+  margin-top: 5px;
+  color: #addbc9;
+}
+
+.hashtag-category {
+  color: #fff;
 }
 
 /* ----------------------- Post List category styling */
 .edit_delete {
   font-size: 15px;
+}
+
+/* ----------------------- Post List category styling */
+.about-style {
+  font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }

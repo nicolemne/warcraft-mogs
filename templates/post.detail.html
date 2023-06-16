@@ -26,15 +26,15 @@
                         <p class="post-meta italic-style p-margin"><a class="remove-underline" href="#!"><span
                                     class="username-colour">
                                     {{ post.author }}</span></a> {{ post.created_on }}</p>
-                        <span class="category-style"><small>#{{ post.category }}</small></span>
+                        <span class="category-style"><small><span class="hashtag-category">#</span>{{ post.category }}</small></span>
                         <br>
                         {% if user.is_authenticated %}
                         {% if user.id == post.author.id %}
                         <span class="edit_delete">
                             <a href="{% url 'edit_post' post.slug %}"><i
-                                    class="fa-solid fa-pen-to-square icon-white"></i> Edit</a> |
+                                    class="fa-solid fa-pen-to-square icon-edit"></i></a>
                             <a href="{% url 'delete_post' post.slug %}"> <i
-                                    class="fa-solid fa-trash-can icon-white"></i> Delete</a>
+                                    class="fa-solid fa-trash-can icon-delete"></i></a>
                         </span>
                         {% endif %}
                         {% endif %}

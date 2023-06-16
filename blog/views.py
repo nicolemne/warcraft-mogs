@@ -1,6 +1,8 @@
 from django.shortcuts import render, get_object_or_404, reverse
 from django.views.generic import View, CreateView, ListView, UpdateView, DeleteView  # noqa
 from django.http import HttpResponseRedirect
+from django.utils.text import slugify
+from django.utils.crypto import get_random_string
 from django.contrib import messages
 from django.urls import reverse_lazy
 from .models import Post
@@ -99,13 +101,43 @@ class UploadPost(CreateView):
     model = Post
     form_class = UploadForm
     template_name = 'upload_post.html'
+    success_url = reverse_lazy('home')
 
     def form_valid(self, form):
+        '''
+        Below code sets the forms instance to the logged
+        in user and assigns them as the post author
+        when uploading a post. The status is set to indicate
+        that this is a draft Post, so it can later be
+        approved in the admin site.
+        '''
         form.instance.author = self.request.user
-        return HttpResponseRedirect(reverse('home'))
+        form.instance.status = 0
+        '''
+        The following code takes the title of the post
+        and converts it into a slug and turns it into
+        a URL-friendly format. We then check if there is
+        any posts with the same slug that already exist
+        with a while loop, and if it does, we add a random
+        string to make it unique and add this to the slug
+        URL that is generated from the title.
+        '''
+        title = form.cleaned_data['title']
+        slug = slugify(title)
+        unique_slug = slug
+        while Post.objects.filter(slug=unique_slug).exists():
+            random_string = get_random_string(length=4)
+            unique_slug = f"{slug}-{random_string}"
+
+        form.instance.slug = unique_slug
+
+        return super().form_valid(form)
 
 
 class EditPost(UpdateView):
+    '''
+    Allows user to edit a post
+    '''
     model = Post
     template_name = 'edit_post.html'
     form_class = EditForm

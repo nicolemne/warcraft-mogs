@@ -99,19 +99,13 @@ I like to include a palette of the colour scheme here, my favourite site for cre
 
 ### Typography
 
-If you've imported fonts to use in your project, add some information about them here. You can include information like:
-
-Why did you choose the font you have?
-Is this an accessibly friendly font?
-What weights have you included?
-
-I also like to include an image of the fonts chosen as a reference.
-
-[Google Fonts](https://fonts.google.com/) is a popular choice for importing fonts to use in your project, as it doesn't require you to download the fonts to use them.
+All fonts used were already pre-installed with the Bootstrap theme I have chose for this project;
+- [Bootstrap Clean Blog](https://startbootstrap.com/theme/clean-blog)
 
 ### Imagery
 
-Use this section to explain what sort of imagery you plan to use through your site.
+All images are screenshots taken from World of Warcraft content: Copyright ©2004 Blizzard Entertainment, Inc. All rights reserved. World of Warcraft, Warcraft and Blizzard Entertainment are trademarks or registered trademarks of Blizzard Entertainment, Inc. in the U.S. and/or other countries.
+
 
 ### Wireframes
 
@@ -151,8 +145,6 @@ Code Institute have an amazing channel for all things accessibility (a11y-access
 
 ## Technologies Used
 
-👩🏻‍💻 View an example of a completed Technologies Used section [here](https://github.com/kera-cudmore/Bully-Book-Club#Technologies-Used)
-
 ### Languages Used
 
 - HTML5
@@ -167,6 +159,11 @@ Code Institute have an amazing channel for all things accessibility (a11y-access
 - [Summernote](https://summernote.org/)
 - [CrispyForms](https://django-crispy-forms.readthedocs.io/en/latest/)
 - [Cloudinary](https://cloudinary.com/)
+- [Colormind](http://colormind.io/)
+- [Balsamiq](https://balsamiq.com/)
+- [ElephantSQL](https://www.elephantsql.com/)
+- [Heroku](https://dashboard.heroku.com/login)
+- [Bootstrap Clean Blog](https://startbootstrap.com/theme/clean-blog)
 
 ## Deployment & Local Development
 
@@ -186,8 +183,6 @@ The project was deployed to GitHub Pages using the following steps...
 6. Manually Deploy the project and/or Enable Automatic deploys.
 
 ### Local Development
-
-The local development section gives instructions on how someone else could make a copy of your project to play with on their local machine. This section will get more complex in the later projects, and can be a great reference to yourself if you forget how to do this.
 
 #### How to Fork
 
@@ -216,6 +211,16 @@ Please refer to the [TESTING.md](TESTING.md) file for all testing performed.
 - [Bootstrap Forms](https://getbootstrap.com/docs/4.0/components/forms/)
 - [Verbose Name](https://stackoverflow.com/questions/636905/django-form-set-label)
 
+#### UploadPost view:
+My friend Joseph has provided me with pointers and help for my Upload Blog Post feature that was not working. These links were a part of the solution.
+- [Python super() Function](https://www.w3schools.com/python/ref_func_super.asp)
+- [Stackoverflow - We use super().form_valid(form)](https://stackoverflow.com/questions/66248147/could-someone-explain-why-we-return-super-form-validform-in-form-valid-metho)
+- [Stackoverflow - Submit a post/article](https://stackoverflow.com/questions/45775435/modelform-with-user-being-request-user)
+- [Django Accessing “clean” data](https://docs.djangoproject.com/en/4.2/ref/forms/api/)
+- [Why a while loop instead of a for loop](https://support.khanacademy.org/hc/en-us/articles/203327020-When-do-I-use-a-for-loop-and-when-do-I-use-a-while-loop-in-the-JavaScript-challenges-)
+- [Django.utils.crypto (get_random_string())](https://docs.djangoproject.com/en/3.2/topics/auth/passwords/#module-django.utils.crypto)
+- [Django.utils.text (slugify)](https://docs.djangoproject.com/en/3.2/ref/utils/#django.utils.crypto.get_random_string)
+
 ### Code Used
 
 From the "I Think Therefore I blog" project I've used a lot of inspiration and a bit of code: 
@@ -225,14 +230,11 @@ From a comment on [Stackoverflow](https://stackoverflow.com/questions/2662039/ke
 - Fixed background image 
 
 From Codemy "Create a Simple Blog with Python and Django" [video playlist](https://www.youtube.com/playlist?list=PLCC34OHNcOtr025c1kHSPrnP18YPB-NFi):
-- Add Blog Post
-- Style Django Forms With Bootstrap
-- Update and Edit Blog Post
-- Delete Blog Post
+- Set up Categories, Edit & Delete post
 
 ### Content
 
-Who wrote the content for the website? Was it yourself - or have you made the site for someone and they specified what the site was to say? This is the best place to put this information.
+I have written all code in this project myself, of course with the help of different resources such as those named in the Credits and Code Used. Tutor Support, as well as two fellow coder friends - Emelie and Joseph has assisted me when I have been stuck and needed guidance.
 
 ###  Media
 
@@ -240,10 +242,10 @@ If you have used any media on your site (images, audio, video etc) you can credi
   
 ###  Acknowledgments
 
-I would like to thank and acknowledge the following people, who have shown invaluable support throughout my second project:
+I would like to thank and acknowledge the following people, who have shown invaluable support throughout my fourth project:
 
 - Dan Ford, boyfriend and biggest supporter.
-- Mitko Bachvarov, my mentor at Code Institute, for the great help and support with my project. 
+- Mitko Bachvarov, my mentor at Code Institute, for the great help and support with my project.
+- Joseph Doble, for providing help with sources and helping me with easy-to-understand explanations of how things work and why.
 - Emelie Hansson, fellow Code Insitute student whom I've had a lot of support from. 
-- Joseph Doble, for providing easy-to-understand explanations and helping with my questions.
 - Kera Cudmore, for the README and TESTING template.

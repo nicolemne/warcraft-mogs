@@ -38,7 +38,7 @@ DEBUG = True
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 
 ALLOWED_HOSTS = ['warcraft-mogs.herokuapp.com', 'localhost',
-                 '8000-nicolemne-warcraftmogs-1sqa2tu0ftz.ws-eu99.gitpod.io']
+                 '8000-nicolemne-warcraftmogs-1sqa2tu0ftz.ws-eu100.gitpod.io']
 
 # Application definition
 

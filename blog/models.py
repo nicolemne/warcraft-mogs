@@ -59,7 +59,7 @@ class Comment(models.Model):
 
 class Category(models.Model):
     '''
-    Category model to display categories to find certain posts
+    Category model to display a category/tag on each post
     '''
     name = models.CharField(max_length=200, unique=True)
 

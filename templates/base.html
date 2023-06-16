@@ -38,10 +38,10 @@
                     <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="about.html">About</a></li>
                     <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="contact.html">Contact</a></li>
                     {% if user.is_authenticated %}
-                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4"
-                        href="{% url 'upload_post' %}">Upload Post</a></li>
-                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4"
-                            href="{% url 'account_logout' %}">Sign out | <span class="username-style">{{ request.user.username }}</span></a></li>
+                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="{% url 'upload_post' %}">Upload
+                            Post</a></li>
+                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="{% url 'account_logout' %}">Sign
+                            out | <span class="username-style">{{ request.user.username }}</span></a></li>
                     {% else %}
                     <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4"
                             href="{% url 'account_signup' %}">Register</a></li>
@@ -137,7 +137,7 @@
     <script src="/static/javascript/scripts.js"></script>
     <!-- Javascript Dismiss messages -->
     <script>
-        setTimeout(function() {
+        setTimeout(function () {
             let messages = document.getElementById("msg");
             let alert = new bootstrap.Alert(messages);
             alert.close();

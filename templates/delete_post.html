@@ -10,7 +10,7 @@
     <div class="transparent-background">
       <div class="row">
         <div class="col-md-8 mt-3 offset-md-2">
-          <h2 class="title-style delete-post-style">Delete <span class="delete-post-title">< {{ post.title }} ></span></h2>
+          <h2 class="title-style delete-post-style">Delete <span class="delete-post-title">{{ post.title }}</span></h2>
           <form method="POST" action="">
             {% csrf_token %}
             <strong>Are you sure you wish to delete this post?</strong>

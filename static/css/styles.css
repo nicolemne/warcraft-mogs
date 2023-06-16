@@ -12662,7 +12662,7 @@ header.masthead .post-heading .meta a {
 
 .post-title-style {
   color: #9c74c2;
-  text-shadow: 2px 2px #36244d;
+  text-shadow: 1px 1px #36244d;
   font-size: 3rem;
   margin-top: 15px;
 }
@@ -12722,7 +12722,7 @@ header.masthead .post-heading .meta a {
 
 /* ----------------------- Edit Post Image styling*/
 .delete-post-title {
-  color: #fff;
+  color: #89ab93;
 }
 
 .delete-post-style {
@@ -12732,7 +12732,7 @@ header.masthead .post-heading .meta a {
 /* ----------------------- Category styling */
 .category-style {
   margin-top: 5px;
-  color: #addbc9;
+  color: #e3c456;
 }
 
 .hashtag-category {
@@ -12759,5 +12759,5 @@ header.masthead .post-heading .meta a {
 }
 
 .contact-success {
-  margin: 2em 0 2em 0;
+  margin: 3em 0 3em 0;
 }

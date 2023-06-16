@@ -167,20 +167,109 @@ Code Institute have an amazing channel for all things accessibility (a11y-access
 
 ## Deployment & Local Development
 
-👩🏻‍💻 View an example of a completed Deployment & Local Development section [here](https://github.com/kera-cudmore/TheQuizArms#Deployment)
-
 ### Deployment
 
-#### Heroku
+The site was deployed using Heroku, following the steps offered by Code Institute.
+You can find the instructions in a Google Docs [here](https://docs.google.com/document/d/1P5CWvS5cYalkQOLeQiijpSViDPogtKM7ZGyqK-yehhQ/edit#heading=h.5s9novsydyp1).
 
-The project was deployed to GitHub Pages using the following steps...
+### 1. Creating the Django Project:
 
-1. Log in to Heroku and go to your Apps. Select the app/project you wish to deploy.
-2. Click on the "Deploy" section to view alternatives.
-3. Inside the "Deploy" section, go to "Deployment method".
-4. Connect your GitHub account to your Heroku project. 
-5. Choose the project you wish to deploy in the "App connected to GitHub" section below.
-6. Manually Deploy the project and/or Enable Automatic deploys.
+- Install Django and gunicorn: `pip3 install django gunicorn`
+- Install supporting database libraries dj_database_url and psycopg2 library: `pip install dj_database_url psycopg2`
+- Install Cloudinary libraries to manage static files: `pip install dj-3-cloudinary-storage`
+- Create file for requirements: `pip freeze --local > requirements.txt`
+- Create project: `django-admin startproject project_name`
+- Create app: `python manage.py startapp app_name`
+- Add app to list of `installed apps` in settings.py file: `'app_name'`
+- Migrate changes: `python manage.py migrate`
+- Test server works locally: `python manage.py runserver`
+
+### 2. Create your Heroku App:
+
+- Navigate to the Heroku website
+- Create a Heroku account by entering your email address and a password (or login if you have one already).
+- Activate the account through the authentication email sent to your email account
+- Click the new button on the top right corner of the screen and select create a new app from the dropdown menu.
+- Enter a unique name for the application.
+- Select the appropriate region for the application.
+- Click create app
+- In the Heroku dashboard click on the Resources tab
+- Scroll down to Add-Ons, search for and select 'Heroku Postgres'
+- In the Settings tab, scroll down to 'Reveal Config Vars' and copy the text in the box beside DATABASE_URL.
+
+### 3. Set up Environment Variables:
+
+- In you IDE create a new env.py file in the top level directory
+- Add env.py to the .gitignore file
+- In env.py import the os library
+- In env.py add `os.environ["DATABASE_URL"]` = "Paste in the text link copied above from Heroku DATABASE_URL"
+- In env.py add `os.environ["SECRET_KEY"]` = "Make up your own random secret key"
+- In Heroku Settings tab Config Vars enter the same secret key created in env.py by entering 'SECRET_KEY' in the box for 'KEY' and your randomly created secret key in the 'value' box.
+
+### 4. Setting up settings.py
+- In your Django 'settings.py' file type:
+
+```
+from pathlib import Path
+import os
+import dj_database_url
+
+if os.path.isfile("env.py"):
+    import env
+```
+
+- Remove the default insecure secret key in settings.py and replace with the link to the secret key variable in Heroku by typing: SECRET_KEY = os.environ.get(SECRET_KEY)
+- Comment out the DATABASES section in settings.py and replace with:
+
+```
+DATABASES = {
+  'default': 
+  dj_database_url.parse(os.environ.get("DATABASE_URL"))
+  }
+```
+
+- Create a Cloudinary account and from the 'Dashboard' in Cloudinary copy your url into the env.py file by typing: `os.environ["CLOUDINARY_URL"] = "cloudinary://<insert-your-url>"`
+- In Heroku add cloudinary url to 'config vars'
+- In Heroku config vars add DISABLE_COLLECTSTATIC with value of '1' (note: this must be removed for final deployment)
+- Add Cloudinary libraries to the installed apps section of settings.py file:
+```
+'cloudinary_storage'
+'django.contrib.staticfiles''
+'cloudinary'
+```
+
+- Connect Cloudinary to the Django app in settings.py:
+
+```
+STATIC_URL = '/static'
+STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'STATIC')]
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+MEDIA_URL = '/media/'
+DEFAULT_FILE_STORAGE =
+'cloudinary_storage.storage.MediaCloudinaryStorage'
+* Link file to the templates directory in Heroku 
+* Place under the BASE_DIR: TEMPLATES_DIR = os.path.join(BASE_DIR,
+'templates')
+```
+
+- Change the templates directory to TEMPLATES_DIR. Place within the TEMPLATES array: `'DIRS': [TEMPLATES_DIR]`
+- Add Heroku Hostname to ALLOWED_HOSTS: `ALLOWED_HOSTS = ['rhi-book-nook.herokuapp.com', 'localhost']` *Create Procfile at the top level of the file structure and insert the following: web: gunicorn PROJECT_NAME.wsgi
+- Make an initial commit and push the code to the GitHub Repository. `git add . git commit -m "Initial deployment" git push`
+
+### 5. Heroku Deployment:
+- Click Deploy tab in Heroku
+- In the 'Deployment method' section select 'Github' and click the 'connect to Github' button to confirm.
+- In the 'search' box enter the Github repository name for the project
+- Click search and then click connect to link the heroku app with the Github repository. The box will confirm that heroku is connected to the repository.
+
+### 6. Final Deployment
+In the IDE:
+
+- When development is complete change the debug setting to: DEBUG = False in settings.py
+- In Heroku settings config vars change the DISABLE_COLLECTSTATIC value to 0
+- Because DEBUG must be switched to True for development and False for production it is recommended that only manual deployment is used in Heroku.
+- To manually deploy click the button 'Deploy Branch'. The default 'main' option in the dropdown menu should be selected in both cases. When the app is deployed a message 'Your app was successfully deployed' will be shown. Click 'view' to see the deployed app in the browser.
 
 ### Local Development
 
@@ -194,10 +283,10 @@ The project was deployed to GitHub Pages using the following steps...
 
 If you wish to clone my project, please see the following steps below:
 
-Navigate to GitHub: https://github.com/nicolemne/warcraft-mogs
-Select the 'Clone' button
-Copy the URL or download it as a ZIP file
-Use git clone + the URL in your terminal, or unpack the ZIP containing the project
+- Navigate to GitHub: https://github.com/nicolemne/warcraft-mogs
+- Select the 'Clone' button
+- Copy the URL or download it as a ZIP file
+- Use git clone + the URL in your terminal, or unpack the ZIP containing the project
 
 ## Testing
 

@@ -69,3 +69,16 @@ class Category(models.Model):
     def get_absolute_url(self):
         return reverse("home")
 
+
+class Contact(models.Model):
+    '''
+    Contact form
+    '''
+    name = models.CharField(max_length=150)
+    email = models.EmailField()
+    title = models.CharField(max_length=200, unique=False)
+    message = models.TextField()
+    featured_image = CloudinaryField('image', default='placeholder')
+
+    def __str__(self):
+        return self.name

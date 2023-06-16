@@ -1,4 +1,4 @@
-from .models import Comment, Post, Category
+from .models import Comment, Post, Category, Contact
 from django import forms
 from django_summernote.widgets import SummernoteWidget, SummernoteInplaceWidget
 
@@ -55,4 +55,17 @@ class CommentForm(forms.ModelForm):
         widgets = {
             'body': forms.Textarea(attrs={'class': 'form-control',
                                           'placeholder': 'Write something...'}),
+        }
+
+
+class ContactForm(forms.ModelForm):
+    class Meta:
+        model = Contact
+        fields = ('title', 'name', 'email',
+                  'message', 'featured_image',)
+
+    widgets = {
+            'name': forms.TextInput(attrs={'class': 'form-control'}),
+            'email': forms.TextInput(attrs={'class': 'form-control'}),
+            'message': forms.Textarea(attrs={'class': 'form-control'}),
         }

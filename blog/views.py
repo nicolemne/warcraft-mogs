@@ -6,7 +6,7 @@ from django.utils.crypto import get_random_string
 from django.contrib import messages
 from django.urls import reverse_lazy
 from .models import Post
-from .forms import CommentForm, UploadForm, EditForm
+from .forms import CommentForm, UploadForm, EditForm, ContactForm
 
 
 class PostList(ListView):
@@ -156,8 +156,31 @@ class DeletePost(DeleteView):
 
 
 class AboutPage(View):
+    """
+    Renders the About page
+    """
     model = Post
     template_name = 'about'
 
     def get(self, request, *args, **kwargs):
         return render(request, 'about.html')
+
+
+def contact(request):
+    """
+    Renders the Contact page
+    """
+    if request.method == "POST":
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return render(request, 'contact_success.html')
+    else:
+        form = ContactForm()
+    
+    submitted = request.GET.get('submitted', False)
+    context = {
+        'form': form,
+        'submitted': submitted,
+    }
+    return render(request, 'contact.html', context)

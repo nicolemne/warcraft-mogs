@@ -12744,7 +12744,20 @@ header.masthead .post-heading .meta a {
   font-size: 15px;
 }
 
-/* ----------------------- Post List category styling */
+/* ----------------------- About page */
 .about-style {
   font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+/* ----------------------- Contact page */
+.colour-emphasis {
+  color: #c08df0;
+}
+
+.btn-contact {
+  margin-top: 2em;
+}
+
+.contact-success {
+  margin: 2em 0 2em 0;
 }

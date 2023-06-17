@@ -22,7 +22,7 @@ class UploadForm(forms.ModelForm):
         widgets = {
             'title': forms.TextInput(attrs={'class': 'form-control',
                                             'placeholder': 'Title'}),
-            'content': SummernoteWidget(),
+            'content': forms.Textarea(attrs={'class': 'form-control'}),
             'category': forms.Select(choices=category_list, attrs={'class': 'form-control'}),
         }
 

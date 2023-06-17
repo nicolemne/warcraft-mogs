@@ -4,9 +4,6 @@ from django import forms
 from cloudinary.models import CloudinaryField
 from django.urls import reverse
 
-# Tuple to display whether the post is in Draft or Published status
-STATUS = ((0, "Draft"), (1, "Published"))
-
 
 class Post(models.Model):
     '''
@@ -21,7 +18,6 @@ class Post(models.Model):
     featured_image = CloudinaryField('image', default='placeholder')
     description = models.CharField(max_length=200, blank=True)
     created_on = models.DateTimeField(auto_now_add=True)
-    status = models.IntegerField(choices=STATUS, default=0)
     likes = models.ManyToManyField(User, related_name='blog_likes', blank=True)
     category = models.CharField(max_length=200, default="undefined")
 
@@ -48,7 +44,6 @@ class Comment(models.Model):
     email = models.EmailField()
     body = models.TextField(verbose_name="")
     created_on = models.DateTimeField(auto_now_add=True)
-    approved = models.BooleanField(default=False)
 
     class Meta:
         ordering = ['created_on']

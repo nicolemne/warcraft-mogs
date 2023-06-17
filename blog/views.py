@@ -15,7 +15,7 @@ class PostList(ListView):
     Displays all approved posts in a list on the home page (index.html)
     '''
     model = Post
-    queryset = Post.objects.filter(status=1).order_by('-created_on')
+    queryset = Post.objects.order_by('-created_on')
     template_name = 'index.html'
     paginate_by = 3
 
@@ -25,11 +25,10 @@ class PostDetail(View):
     The view to display a posts and comments, as well as
     approving comments
     '''
-
     def get(self, request, slug, *args, **kwargs):
-        queryset = Post.objects.filter(status=1)
+        queryset = Post.objects
         post = get_object_or_404(queryset, slug=slug)
-        comments = post.comments.filter(approved=True).order_by("-created_on")
+        comments = post.comments.order_by("-created_on")
         liked = False
         if post.likes.filter(id=self.request.user.id).exists():
             liked = True
@@ -47,10 +46,9 @@ class PostDetail(View):
         )
 
     def post(self, request, slug, *args, **kwargs):
-
-        queryset = Post.objects.filter(status=1)
+        queryset = Post.objects
         post = get_object_or_404(queryset, slug=slug)
-        comments = post.comments.filter(approved=True).order_by("-created_on")
+        comments = post.comments.order_by("-created_on")
         liked = False
         if post.likes.filter(id=self.request.user.id).exists():
             liked = True
@@ -63,7 +61,7 @@ class PostDetail(View):
             comment.post = post
             comment.save()
             messages.success(request,
-                             'Comment successfully added! Now awaiting approval...')
+                             'Comment successfully added!')
         else:
             comment_form = CommentForm()
 
@@ -89,8 +87,12 @@ class PostLike(View):
 
         if post.likes.filter(id=request.user.id).exists():
             post.likes.remove(request.user)
+            messages.success(request,
+                             'You have unliked this post.')
         else:
             post.likes.add(request.user)
+            messages.success(request,
+                             'You have liked this post!')
 
         return HttpResponseRedirect(reverse('post_detail', args=[slug]))
 

@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404, reverse
 from django.views.generic import View, CreateView, ListView, UpdateView, DeleteView  # noqa
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.core.paginator import Paginator
 from django.http import HttpResponseRedirect
 from django.utils.text import slugify
 from django.utils.crypto import get_random_string
@@ -22,15 +23,23 @@ class PostList(ListView):
 
 class PostDetail(View):
     '''
-    The view to display a posts and comments, as well as
-    approving comments
+    The view to display a post and comments, as well as approving comments
     '''
+
     def get(self, request, slug, *args, **kwargs):
         queryset = Post.objects
         post = get_object_or_404(queryset, slug=slug)
         comments = post.comments.order_by("-created_on")
+
+        # Configure the number of comments to display per page
+        comments_per_page = 4
+        paginator = Paginator(comments, comments_per_page)
+
+        page_number = request.GET.get('page')
+        page_obj = paginator.get_page(page_number)
+
         liked = False
-        if post.likes.filter(id=self.request.user.id).exists():
+        if post.likes.filter(id=request.user.id).exists():
             liked = True
 
         return render(
@@ -38,7 +47,7 @@ class PostDetail(View):
             "post.detail.html",
             {
                 "post": post,
-                "comments": comments,
+                "comments": page_obj,
                 "commented": False,
                 "liked": liked,
                 "comment_form": CommentForm()
@@ -49,8 +58,17 @@ class PostDetail(View):
         queryset = Post.objects
         post = get_object_or_404(queryset, slug=slug)
         comments = post.comments.order_by("-created_on")
+
+        # Number of comments to display per page
+        paginator = Paginator(comments, 4)  # Set the number of comments per page to 4
+        page_number = request.GET.get('page')
+        comments = paginator.get_page(page_number)
+
+        page_number = request.GET.get('page')
+        page_obj = paginator.get_page(page_number)
+
         liked = False
-        if post.likes.filter(id=self.request.user.id).exists():
+        if post.likes.filter(id=request.user.id).exists():
             liked = True
 
         comment_form = CommentForm(data=request.POST)
@@ -60,8 +78,7 @@ class PostDetail(View):
             comment = comment_form.save(commit=False)
             comment.post = post
             comment.save()
-            messages.success(request,
-                             'Comment successfully added!')
+            messages.success(request, 'Comment successfully added!')
         else:
             comment_form = CommentForm()
 
@@ -70,7 +87,7 @@ class PostDetail(View):
             "post.detail.html",
             {
                 "post": post,
-                "comments": comments,
+                "comments": page_obj,
                 "commented": True,
                 "comment_form": comment_form,
                 "liked": liked
@@ -181,7 +198,7 @@ def contact(request):
             return render(request, 'contact_success.html')
     else:
         form = ContactForm()
-    
+   
     submitted = request.GET.get('submitted', False)
     context = {
         'form': form,
@@ -191,7 +208,7 @@ def contact(request):
 
 
 class DeleteComment(View):
-    
+
     def post(self, request, post_id):
         comment_id = request.POST.get('comment_id')
         post = get_object_or_404(Post, id=post_id)

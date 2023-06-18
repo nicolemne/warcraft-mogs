@@ -17,7 +17,7 @@
                                 src="https://res.cloudinary.com/dohlebn4a/image/upload/v1686928566/header_dgxosh.png"
                                 width="100%">
                             {% else %}
-                            <img class="card-img" src=" {{ post.featured_image.url }}" width="100%">
+                            <img class="card-img" src="{{ post.featured_image.url }}" width="100%">
                             {% endif %}
                         </div>
                     </div>
@@ -26,7 +26,8 @@
                         <p class="post-meta italic-style p-margin"><a class="remove-underline" href="#!"><span
                                     class="username-colour">
                                     {{ post.author }}</span></a> {{ post.created_on }}</p>
-                        <span class="category-style"><small><span class="hashtag-category">#</span>{{ post.category }}</small></span>
+                        <span class="category-style"><small><span class="hashtag-category">#</span>
+                            {{ post.category }}</small></span>
                         <br>
                         {% if user.is_authenticated %}
                         {% if user.id == post.author.id %}
@@ -73,7 +74,7 @@
                                 </strong>
                             </div>
                             <div class="col-1">
-                                {% with comments.count as total_comments %}
+                                {% with comments.paginator.count as total_comments %}
                                 <strong class="text-secondary text-muted h6 icon-size no-italics"><i
                                         class="fa-regular fa-comment comments-icon"></i>
                                     {{ total_comments }}</strong>
@@ -100,24 +101,51 @@
                                     {{ comment.created_on }}
                                 </span> wrote:
                             </p>
+                            {% if user.is_authenticated %}
+                            <a href="{% url 'comment_delete' post.slug %}"><button type="submit" name="blogpost_id"
+                                    class="btn-delete btn-border"><i class="fa-solid fa-xmark"></i></i></button></a>
                             <span class="no-italics">{{ comment.body | linebreaks }}</span>
                             <hr>
+                            {% endif %}
                         </div>
+
                         {% endfor %}
+
+                        <!-- Pagination -->
+                        {% if comments.has_other_pages %}
+                        <div class="pagination justify-content-center mt-4">
+                            {% if comments.has_previous %}
+                            <a href="?page=1" class="btn btn-link"><i class="fas fa-angle-double-left"></i></a>
+                            <a href="?page={{ comments.previous_page_number }}" class="btn btn-link"><i
+                                    class="fas fa-angle-left"></i></a>
+                            {% endif %}
+
+                            {% for num in comments.paginator.page_range %}
+                            {% if num == comments.number %}
+                            <a href="?page={{ num }}" class="btn btn-primary btn-pagination active">{{ num }}</a>
+                            {% elif num > comments.number|add:'-3' and num < comments.number|add:'3' %}
+                            <a href="?page={{ num }}" class="btn btn-primary btn-pagination">{{ num }}</a>
+                            {% endif %}
+                            {% endfor %}
+
+                            {% if comments.has_next %}
+                            <a href="?page={{ comments.next_page_number }}" class="btn btn-link"><i
+                                    class="fas fa-angle-right"></i></a>
+                            <a href="?page={{ comments.paginator.num_pages }}" class="btn btn-link"><i
+                                    class="fas fa-angle-double-right"></i></a>
+                            {% endif %}
+                        </div>
+                        {% endif %}
                     </div>
                 </div>
                 <div class="col-md-4 card mb-4 mt-3 remove-border">
                     <div class="card-body">
-                        {% if commented %}
-                        <div class="alert alert-success" role="alert">
-                            Your comment is awaiting approval
-                        </div>
-                        {% else %}
                         {% if user.is_authenticated %}
 
                         <h3>Leave a comment:</h3>
                         <p class="p-margin italic-style ">Posting as: <span class="username-colour">
                                 {{ user.username }}</span></p>
+                        <br>
                         <div class="form-group">
                             <form method="post" style="margin-top: 1.3em;">
                                 {{ comment_form | crispy }}
@@ -125,7 +153,6 @@
                                 <button type="submit" class="btn-style btn btn-dark btn-style">Submit</button>
                             </form>
                         </div>
-                        {% endif %}
                         {% endif %}
                     </div>
                 </div>

@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% load crispy_forms_tags staticfiles %}
+{% load crispy_forms_tags static %}
 
 {% block content %}
 
@@ -13,7 +13,7 @@
                         class="colour-emphasis"><strong>you!</strong></span> Share your ideas and suggestions by sending
                     us a message!
                 </p>
-                <form class="form-group" onsubmit="return sendMail(this);">
+                <form class="form-group" onsubmit="return sendMail(this)">
                     {% csrf_token %}
                     {{ form | crispy }}
                     <button class="btn btn-dark btn-style btn-contact" type="submit">Send Message</button>

@@ -12707,6 +12707,12 @@ header.masthead .post-heading .meta a {
   border: solid 1px #fff;
 }
 
+.btn-delete {
+  margin-top: 0px;
+  margin-bottom: 1em;
+  color: #fff;
+}
+
 /* ----------------------- Username styling*/
 .username-style {
   color: #a875d9;

@@ -6,7 +6,7 @@ from django.utils.text import slugify
 from django.utils.crypto import get_random_string
 from django.contrib import messages
 from django.urls import reverse_lazy
-from .models import Post
+from .models import Post, Comment
 from .forms import CommentForm, UploadForm, EditForm, ContactForm
 
 
@@ -188,3 +188,14 @@ def contact(request):
         'submitted': submitted,
     }
     return render(request, 'contact.html', context)
+
+
+class DeleteComment(View):
+    
+    def post(self, request, post_id):
+        comment_id = request.POST.get('comment_id')
+        post = get_object_or_404(Post, id=post_id)
+        comment = get_object_or_404(Comment, id=comment_id, post=post)
+        comment.delete()
+
+        return redirect('post_detail', slug=post.slug)

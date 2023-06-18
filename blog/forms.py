@@ -62,7 +62,7 @@ class ContactForm(forms.ModelForm):
     class Meta:
         model = Contact
         fields = ('title', 'name', 'email',
-                  'message', 'featured_image',)
+                  'message',)
 
     widgets = {
             'name': forms.TextInput(attrs={'class': 'form-control'}),

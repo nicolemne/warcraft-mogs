@@ -1,6 +1,5 @@
 {% extends "base.html" %}
-
-{% load crispy_forms_tags %}
+{% load crispy_forms_tags staticfiles %}
 
 {% block content %}
 
@@ -10,18 +9,32 @@
             <div class="row gx-4 gx-lg-5 justify-content-center">
                 <h2 class="title-style">Contact Us</h2>
 
-                <p class="font-style">Do you want to feature your transmog in this blog? Send us an email with your screenshot, and we
-                    will add it to your blog post when it has been sent for approval. Make sure to include the
-                    <span class="colour-emphasis"><strong>Title</strong></span> of your post.
+                <p class="font-style">We're eager to hear from <span
+                        class="colour-emphasis"><strong>you!</strong></span> Share your ideas and suggestions by sending
+                    us a message!
                 </p>
-                <form class="form-group" method="POST">
+                <form class="form-group" onsubmit="return sendMail(this);">
                     {% csrf_token %}
                     {{ form | crispy }}
-                <button class="btn btn-dark btn-style btn-contact" type="submit">Submit</button>
+                    <button class="btn btn-dark btn-style btn-contact" type="submit">Send Message</button>
                 </form>
             </div>
         </div>
     </div>
 </div>
+
+{% endblock %}
+
+{% block scripts %}
+
+<script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init("WhFrtUwg0pjrz887N");
+   })();
+</script>
+<script src="{% static 'javascript/sendEmail.js' %}" type="text/javascript"></script>
 
 {% endblock %}

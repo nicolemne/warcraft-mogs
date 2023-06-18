@@ -7,31 +7,55 @@
 {% if user.id == post.author.id %}
 
 <div class="container">
-    <div class="transparent-background">
-      <div class="row">
-        <div class="col-md-8 mt-3 offset-md-2">
-          <h2 class="title-style">Edit Post</h2>
-          <div class="row row-margin gx-4 gx-lg-5 justify-content-center">
-            <div class="image-container">
-                {% if "placeholder" in post.featured_image.url %}
-                <img class="card-img edit-post-image"
-                    src="https://res.cloudinary.com/dohlebn4a/image/upload/v1686340872/header_liwt82.png"
-                    width="100%">
-                {% else %}
-                <img class="card-img edit-post-image" src=" {{ post.featured_image.url }}" width="100%">
-                {% endif %}
-            </div>
+  <div class="transparent-background">
+    <div class="row">
+      <div class="col-md-8 mt-3 offset-md-2">
+        <h2 class="title-style">Edit Post</h2>
+        <div class="row row-margin gx-4 gx-lg-5 justify-content-center">
+          <div class="image-container">
+            {% if "placeholder" in post.featured_image.url %}
+            <img class="card-img edit-post-image"
+              src="https://res.cloudinary.com/dohlebn4a/image/upload/v1686340872/header_liwt82.png" width="100%">
+            {% else %}
+            <img class="card-img edit-post-image" src=" {{ post.featured_image.url }}" width="100%">
+            {% endif %}
+          </div>
         </div>
-          <form method="POST" action="">
-            {% csrf_token %}
-            {{ form | crispy }}
-            <button class="btn btn-dark btn-style" type="submit">Save</button>
-          </form>
-        </div>
+        <form method="POST" action="">
+          {% csrf_token %}
+          {{ form | crispy }}
+          <button class="btn btn-dark btn-style" type="submit">Save</button>
+        </form>
       </div>
     </div>
   </div>
+</div>
+
+{% else %}
+
+<div class="container px-4 px-lg-5">
+  <div class="row gx-4 gx-lg-5 justify-content-center transparent-background">
+      <div class="post-preview">
+        <div class="image-container">
+          <img class="card-img success-img"
+            src="https://res.cloudinary.com/dohlebn4a/image/upload/v1687015421/404_r8sjyp.png" alt="Thumbs up!">
+        </div>
+    </div>
+</div>
 
 {% endif %}
+{% else %}
+
+<div class="container px-4 px-lg-5">
+  <div class="row gx-4 gx-lg-5 justify-content-center transparent-background">
+      <div class="post-preview">
+        <div class="image-container">
+          <img class="card-img success-img"
+            src="https://res.cloudinary.com/dohlebn4a/image/upload/v1687015421/404_r8sjyp.png" alt="Thumbs up!">
+        </div>
+      </div>
+  </div>
+</div>
+
 {% endif %}
 {% endblock %}

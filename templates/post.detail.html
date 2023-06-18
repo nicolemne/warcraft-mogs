@@ -110,9 +110,13 @@
                                 </span> wrote:
                             </p>
                             {% if user.is_authenticated and user.username == comment.name %}
-                            <a href="{% url 'comment_delete' comment.id %}" class="btn-delete btn-border">
-                                <i class="fa-solid fa-xmark"></i>
-                            </a>
+                            <form method="post" action="{% url 'comment_delete' post.id %}" class="comment-delete-form">
+                                {% csrf_token %}
+                                <input type="hidden" name="comment_id" value="{{ comment.id }}">
+                                <button type="submit" class="btn-delete btn-border">
+                                    <i class="fa-solid fa-xmark"></i>
+                                </button>
+                            </form>
                             {% endif %}
                             <span class="no-italics">{{ comment.body | linebreaks }}</span>
                             <hr>

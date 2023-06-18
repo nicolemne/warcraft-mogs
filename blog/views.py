@@ -206,11 +206,17 @@ def contact(request):
 
 
 class DeleteComment(View):
-
     def post(self, request, post_id):
         comment_id = request.POST.get('comment_id')
         post = get_object_or_404(Post, id=post_id)
         comment = get_object_or_404(Comment, id=comment_id, post=post)
-        comment.delete()
+        
+        # Check if the user is the author of the comment
+        if comment.name == request.user.username:
+            comment.delete()
+            messages.success(request, 'Comment successfully deleted.')
+        else:
+            messages.error(request, 'You are not authorized to delete this comment.')
 
         return redirect('post_detail', slug=post.slug)
+

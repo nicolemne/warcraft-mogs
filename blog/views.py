@@ -1,5 +1,5 @@
-from django.shortcuts import render, get_object_or_404, reverse
-from django.views.generic import View, CreateView, ListView, UpdateView, DeleteView  # noqa
+from django.shortcuts import render, get_object_or_404, redirect
+from django.views.generic import View, CreateView, ListView, UpdateView, DeleteView
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.core.paginator import Paginator
 from django.http import HttpResponseRedirect
@@ -79,8 +79,8 @@ class PostDetail(View):
             comment.post = post
             comment.save()
             messages.success(request, 'Comment successfully added!')
-        else:
-            comment_form = CommentForm()
+            
+            return redirect('post_detail', slug=slug)  # Redirect to the post detail page
 
         return render(
             request,
@@ -104,12 +104,10 @@ class PostLike(View):
 
         if post.likes.filter(id=request.user.id).exists():
             post.likes.remove(request.user)
-            messages.success(request,
-                             'You have unliked this post.')
+            messages.success(request, 'You have unliked this post.')
         else:
             post.likes.add(request.user)
-            messages.success(request,
-                             'You have liked this post!')
+            messages.success(request, 'You have liked this post!')
 
         return HttpResponseRedirect(reverse('post_detail', args=[slug]))
 

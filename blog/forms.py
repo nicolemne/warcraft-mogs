@@ -33,13 +33,13 @@ class EditForm(forms.ModelForm):
     '''
     class Meta:
         model = Post
-        fields = ('title', 'content', 'description',
-                  'category', 'featured_image',)
+        fields = ('title', 'description',
+                  'category', 'content', 'featured_image',)
 
         widgets = {
             'title': forms.TextInput(attrs={'class': 'form-control',
                                             'placeholder': 'Title'}),
-            'content': SummernoteWidget(),
+            'content': forms.Textarea(attrs={'class': 'form-control'}),
             'category': forms.Select(choices=category_list, attrs={'class': 'form-control'}),
         }
 

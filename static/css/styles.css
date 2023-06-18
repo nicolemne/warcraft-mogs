@@ -4738,7 +4738,7 @@ fieldset:disabled .btn {
 }
 
 .card-text:last-child {
-  margin-bottom: 0;
+  margin-bottom: 2em;
 }
 
 .card-link+.card-link {
@@ -4790,7 +4790,7 @@ fieldset:disabled .btn {
 .card-img-top,
 .card-img-bottom {
   width: 100%;
-  margin-top: 60px;
+  margin-top: 2em;
   border: solid 1px;
 }
 
@@ -12569,7 +12569,6 @@ header.masthead .post-heading .meta a {
 
 .post-preview>a>.post-title {
   font-size: 1.875rem;
-  margin-top: 1.875rem;
   margin-bottom: 0.625rem;
 }
 
@@ -12611,10 +12610,16 @@ header.masthead .post-heading .meta a {
 
 .likes-icon {
   color: #bd3e3e;
+  font-weight: 750;
+  font-size: 1.5rem;
 }
 
 .comments-icon {
   color: #3e82bd;
+  margin-left: 1em;
+  margin-right: 5px;
+  font-weight: 750;
+  font-size: 1.5rem;
 }
 
 .no-italics {
@@ -12642,11 +12647,17 @@ header.masthead .post-heading .meta a {
 }
 
 .icon-edit:hover {
-  color: #607ff7;
+  color: #e3c456;
 }
 
 .icon-delete:hover {
-  color: #a13232;
+  color: #e3c456;
+}
+
+.likes-icon:hover {
+  color: #fff;
+  font-size:2em;
+  transition: 1s ease-out;
 }
 
 /* -----------------------  Post.detail */
@@ -12661,21 +12672,30 @@ header.masthead .post-heading .meta a {
 
 .post-title-author {
   margin-left: 26px;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 .post-title-style {
   color: #9c74c2;
   text-shadow: 1px 1px #36244d;
   font-size: 3rem;
-  margin-top: 15px;
+  margin-top: 10px;
+}
+
+.detail-style {
+  padding: 20px 0 0 20px;
+  margin-left: 0.50em;
+  margin-bottom: 0 !important;
+}
+
+.likes-comments {
+  padding: 0;
+  font-weight: 550;
+  font-size: 1.2rem;
+  margin-top: 3px;
 }
 
 /* -----------------------  Comments field */
-.remove-border {
-  --bs-card-border-width: 0px;
-}
-
 .btn-border {
   border: 0px;
   background-color: rgba(0, 0, 0, 0);
@@ -12703,14 +12723,35 @@ header.masthead .post-heading .meta a {
 .btn-style {
   margin-top: 15px;
   margin-bottom: 4em;
+  padding: 0.75rem 0.65rem 0.75rem 0.65rem;
   background-color: #5b3987;
-  border: solid 1px #fff;
+  border: solid 1px #919191;
+  font-weight: 600;
 }
 
 .btn-delete {
   margin-top: 0px;
   margin-bottom: 1em;
   color: #fff;
+}
+
+.btn-back {
+  margin-bottom: 0px;
+  margin-top: 2em;
+  padding: 0.35rem 1rem 0.35rem 1rem;
+  font-weight: 500;
+  border: 1px solid #919191;
+}
+
+.edit-buttons {
+  margin-top: 1.60em;
+  margin-right: 0.55em;
+}
+
+.remove-comment {
+  color: #b50000;
+  margin-right: 0.55em;
+  margin-top: 0;
 }
 
 /* ----------------------- Username styling*/
@@ -12777,4 +12818,17 @@ header.masthead .post-heading .meta a {
 .success-img {
   border: none;
   margin-top: 0px;
+}
+
+/* max-width 992px */
+@media screen and (max-width: 992px) {
+  .btn-delete {
+    margin-bottom: 13px;
+}
+
+.remove-comment {
+  color: #b50000;
+  margin-right: 0;
+
+}
 }

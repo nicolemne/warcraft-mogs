@@ -15,17 +15,16 @@
           <div class="image-container">
             {% if "placeholder" in post.featured_image.url %}
             <img class="card-img edit-post-image"
-              src="https://res.cloudinary.com/dohlebn4a/image/upload/v1686340872/header_liwt82.png" width="100%">
+              src="https://res.cloudinary.com/dohlebn4a/image/upload/v1686928566/header_dgxosh.png" width="100%">
             {% else %}
             <img class="card-img edit-post-image" src=" {{ post.featured_image.url }}" width="100%">
             {% endif %}
           </div>
         </div>
-        <form method="POST" action="">
+        <form method="POST" enctype="multipart/form-data" action="" id="content" name="content">
           {% csrf_token %}
           {{ form | crispy }}
           <button class="btn btn-dark btn-style" type="submit">Save</button>
-        </form>
       </div>
     </div>
   </div>

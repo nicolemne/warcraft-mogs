@@ -369,6 +369,7 @@ Please refer to the [TESTING.md](TESTING.md) file for all testing performed.
 - [Bootstrap Forms](https://getbootstrap.com/docs/4.0/components/forms/)
 - [Verbose Name](https://stackoverflow.com/questions/636905/django-form-set-label)
 - [Paginator Class](https://docs.djangoproject.com/en/4.2/topics/pagination/)
+- [Delete Comment](https://stackoverflow.com/questions/2315187/allowing-users-to-delete-their-own-comments-in-django)
 
 #### **UploadPost view:**
 I am grateful to my friend Joseph for offering valuable guidance and assistance in resolving issues with my Upload Blog Post feature. He shared many helpful pointers and provided me with relevant links that played a crucial role in finding a solution (the majority of which are listed below - I apologize if I have forgotten to include any links). I greatly appreciate his support and contribution to the success of my project.

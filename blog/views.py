@@ -6,7 +6,7 @@ from django.http import HttpResponseRedirect
 from django.utils.text import slugify
 from django.utils.crypto import get_random_string
 from django.contrib import messages
-from django.urls import reverse_lazy
+from django.urls import reverse_lazy, reverse
 from .models import Post, Comment
 from .forms import CommentForm, UploadForm, EditForm, ContactForm
 

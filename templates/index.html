@@ -11,10 +11,23 @@
             <div class="post-preview">
                 <div class="image-container">
                     {% if "placeholder" in post.featured_image.url %}
-                    <img class="card-img" src="https://res.cloudinary.com/dohlebn4a/image/upload/v1686928566/header_dgxosh.png">
+                    <img class="card-img"
+                        src="https://res.cloudinary.com/dohlebn4a/image/upload/v1686928566/header_dgxosh.png">
                     {% else %}
                     <img class="card-img" src="{{ post.featured_image.url }}">
                     {% endif %}
+                </div>
+                <div class="position-relative edit-buttons">
+                    <div class="position-absolute bottom-0 end-0">
+                        <span class="text-muted h6 no-italics">
+                            <i class="far fa-heart index-like-margin main-likes-icon"></i>
+                            <span class="number-of-likes">{{ post.number_of_likes }}</span>
+                            {% with post.comments.count as total_comments %}
+                            <i class="fa-regular fa-comment main-comments-icon"></i>
+                            <span>{{ total_comments }}</span>
+                            {% endwith %}
+                        </span>
+                    </div>
                 </div>
                 <a href="{% url 'post_detail' post.slug %}">
                     <h2 class="post-title post-title-style">{{ post.title }}</h2>
@@ -25,16 +38,8 @@
                     <a href="#!"><span class="username-colour">{{ post.author }}</span></a>
                     {{ post.created_on }}
                     <br>
-                    <span class="category-style"><small><span class="hashtag-category">#</span>{{ post.category }}</small></span>
-                    <br>
-                    <span class="text-muted h6 no-italics">
-                        <i class="far fa-heart likes-icon"></i>
-                        <span class="number-of-likes">{{ post.number_of_likes }}</span>
-                        {% with post.comments.count as total_comments %}
-                        <i class="fa-regular fa-comment comments-icon"></i>
-                        <span>{{ total_comments }}</span>
-                        {% endwith %}
-                    </span>
+                    <span class="category-style"><small><span class="hashtag-category">#</span>
+                        {{ post.category }}</small></span>
                 </p>
                 <!-- Divider-->
                 <hr class="my-4" />

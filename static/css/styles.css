@@ -4790,7 +4790,7 @@ fieldset:disabled .btn {
 .card-img-top,
 .card-img-bottom {
   width: 100%;
-  margin-top: 2em;
+  margin-top: 1em;
   border: solid 1px;
 }
 
@@ -12660,6 +12660,22 @@ header.masthead .post-heading .meta a {
   transition: 1s ease-out;
 }
 
+.main-likes-icon {
+  color: #bd3e3e;
+  font-weight: 750;
+  font-size: 1.2rem;
+}
+
+.main-comments-icon {
+  color: #3e82bd;
+  font-weight: 750;
+  font-size: 1.2rem;
+}
+
+.index-like-margin {
+  margin-top: 1em;
+}
+
 /* -----------------------  Post.detail */
 .content-container {
   margin-left: 10%;
@@ -12679,7 +12695,7 @@ header.masthead .post-heading .meta a {
   color: #9c74c2;
   text-shadow: 1px 1px #36244d;
   font-size: 3rem;
-  margin-top: 10px;
+  margin-top: 1em;
 }
 
 .detail-style {
@@ -12689,10 +12705,11 @@ header.masthead .post-heading .meta a {
 }
 
 .likes-comments {
-  padding: 0;
+  color: #fff;
+  margin-left: 0.1em;
+  margin-right: 5px;
   font-weight: 550;
-  font-size: 1.2rem;
-  margin-top: 3px;
+  font-size: 1.5rem;
 }
 
 /* -----------------------  Comments field */

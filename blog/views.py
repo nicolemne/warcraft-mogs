@@ -205,7 +205,7 @@ def contact(request):
     return render(request, 'contact.html', context)
 
 
-class DeleteComment(View):
+class DeleteComment(DeleteView):
     def post(self, request, post_id):
         comment_id = request.POST.get('comment_id')
         post = get_object_or_404(Post, id=post_id)

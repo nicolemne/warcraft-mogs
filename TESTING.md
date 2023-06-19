@@ -27,9 +27,7 @@ If you want to add optional shields.io badges to your TESTING file, I like to ad
 
 ---
 
-## AUTOMATED TESTING
-
-The Automated Testing includes all the testing that is carried out by a program, like W3C HTML validation.
+## Validators
 
 ###  W3C Validator
 
@@ -85,9 +83,114 @@ This is where you will test the user stories you created in the README against y
 
 ### Full Testing
 
-👩🏻‍💻 View an example of a completed full testing section [here](https://github.com/kera-cudmore/TheQuizArms/blob/main/TESTING.md#Full-Testing)
+Full testing was performed on the following devices:
 
-Full testing can be tedious, so it is great to try and break this part up into smaller chunks and do a bit at a time. Full testing is when you go through the site and test every single thing that can be tested. So for example you would test that all links in the navbar correctly redirect the user to where there are supposed to go. A table is the perfect way to display this information.
+* Laptop:
+  * Macbook Pro 2021 14 inch screen
+* Mobile Devices:
+  * iPhone 13 pro.
+  * iPhone 11 pro.
+  * Phone X.
+
+Each device tested the site using the following browsers:
+
+* Google Chrome
+* Safari
+* Firefox
+
+
+| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
+| --- | --- | --- | --- | --- |
+| `Navbar` |
+|  |  |  |  |  |
+| xxx | xxx | xxx | xxx | xxx |
+| xxx | xxx | xxx | xxx | xxx |
+| xxx | xxx | xxx | xxx | xxx |
+| xxx | xxx | xxx | xxx | xxx |
+| xxx | xxx | xxx | xxx | xxx |
+| xxx | xxx | xxx | xxx | xxx |
+| `Footer` |
+|  |  |  |  |  |
+| xxx | xxx | xxx | xxx | xxx |
+| xxx | xxx | xxx | xxx | xxx |
+| xxx | xxx | xxx | xxx | xxx |
+| xxx | xxx | xxx | xxx | xxx |
+| xxx | xxx | xxx | xxx | xxx |
+| `Home Page` |
+|   |   |   |   |
+| xxx | xxx | xxx | xxx | xxx |
+| xxx | xxx | xxx | xxx | xxx |
+| xxx | xxx | xxx | xxx | xxx |
+| xxx | xxx | xxx | xxx | xxx |
+| xxx | xxx | xxx | xxx | xxx |
+| xxx | xxx | xxx | xxx | xxx |
+| `Log in Page` |
+| xxx | xxx | xxx | xxx | xxx |
+| xxx | xxx | xxx | xxx | xxx |
+| xxx | xxx | xxx | xxx | xxx |
+| xxx | xxx | xxx | xxx | xxx |
+| xxx | xxx | xxx | xxx | xxx |
+| xxx | xxx | xxx | xxx | xxx |
+| xxx | xxx | xxx | xxx | xxx |
+| `Register Page` |
+| | | | | | |
+| xxx | xxx | xxx | xxx | xxx |
+| xxx | xxx | xxx | xxx | xxx |
+| xxx | xxx | xxx | xxx | xxx |
+| xxx | xxx | xxx | xxx | xxx |
+| xxx | xxx | xxx | xxx | xxx |
+| xxx | xxx | xxx | xxx | xxx |
+| xxx | xxx | xxx | xxx | xxx |
+| `Search Page` |
+|   |   |   |   |  |
+| xxx | xxx | xxx | xxx | xxx |
+| xxx | xxx | xxx | xxx | xxx |
+| xxx | xxx | xxx | xxx | xxx |
+| xxx | xxx | xxx | xxx | xxx |
+| xxx | xxx | xxx | xxx | xxx |
+| `Bookshelves Page` |
+|   |   |   |   |  |
+| xxx | xxx | xxx | xxx | xxx |
+| xxx | xxx | xxx | xxx | xxx |
+| xxx | xxx | xxx | xxx | xxx |
+| xxx | xxx | xxx | xxx | xxx |
+| xxx | xxx | xxx | xxx | xxx |
+| `Books Page` |
+|   |   |   |   |  |
+| xxx | xxx | xxx | xxx | xxx |
+| xxx | xxx | xxx | xxx | xxx |
+| xxx | xxx | xxx | xxx | xxx |
+| xxx | xxx | xxx | xxx | xxx |
+| xxx | xxx | xxx | xxx | xxx |
+| `Add Bookshelf Page` |
+| xxx | xxx | xxx | xxx | xxx |
+| xxx | xxx | xxx | xxx | xxx |
+| xxx | xxx | xxx | xxx | xxx |
+| xxx | xxx | xxx | xxx | xxx |
+| `Edit Bookshelf Page` |
+| xxx | xxx | xxx | xxx | xxx |
+| xxx | xxx | xxx | xxx | xxx |
+| xxx | xxx | xxx | xxx | xxx |
+| xxx | xxx | xxx | xxx | xxx |
+| `Add Review Page` |
+|   |   |   |   |   |
+| xxx | xxx | xxx | xxx | xxx |
+| xxx | xxx | xxx | xxx | xxx |
+| xxx | xxx | xxx | xxx | xxx |
+| xxx | xxx | xxx | xxx | xxx |
+| `Edit Review Page` |
+| xxx | xxx | xxx | xxx | xxx |
+| xxx | xxx | xxx | xxx | xxx |
+| xxx | xxx | xxx | xxx | xxx |
+| xxx | xxx | xxx | xxx | xxx |
+| xxx | xxx | xxx | xxx | xxx |
+| xxx | xxx | xxx | xxx | xxx |
+| xxx | xxx | xxx | xxx | xxx |
+| `Error Page` |
+|   |   |   |   |   |
+| xxx | xxx | xxx | xxx | xxx |
+
+ - - -
 
 ## BUGS
 
@@ -105,5 +208,17 @@ List (or put in a table) all known bugs on your site here as soon as you find th
 | 4 | Nothing happening after uploading a post on the website via the upload_post.html. The post does not get sent to admin for approval. | By adding the def form_valid to my UploadPost view, I was able to upload a blog post logged in as admin, to the admin site, and from there I was able to set the blog post to published to display it on the website. The def form_valid sets the author of the post as the current user and sets the post to a 0 (Draft). By calling the super().form_valid(form), the data is then saved to the database. |
 | 5 | After solving the first issue with the blog post not being saved and sent to the admin for publishing, I logged in with a different user to test if I was able to upload a blog post. I received an error "UNIQUE constraint failed: blog_post.slug", which indicated that the slug generated on the blog post already exists in the database. | To fix this issue I had to start with importing the get_random_string from the django.utils.crypto as well as the slugify from the django.utils.text module to make it possible to generate a unique slug from the title (if there was already a title existing with the same name). I then had to iterate with a while loop through the database to check if a slug already exists with that title. If the title is not unique, it appends a random string (with the help of the get_random_string) to the slug to make it unique inside the while loop. Lastly, when a unique slug is made, it is saved and set to the post it has been generated for. |
 | 6 | When submitting a comment, the comment textarea is not emptied when reloading the page, which results in the same comment being posted again. | Added "return redirect('post_detail', slug=slug)" to the comment_form if statement, to return back to the post when a comment has been successfully submitted. |
-| 7 | xxx | xxx |
-| 8 | xxx | xxx 
+| 7 | When deleting a comment, the comment wasn't actually removed from the database, but only removed from the frontend. The comments count function was still displaying the amount of comments although some were deleted. | Added a "DeleteView" inherit to the DeleteComment class, which updates the database correctly. |
+
+### Bug Examples:
+- Bug 2
+
+![Error2](/media/images/2.png)
+
+- Bug 3
+
+![Error3](/media/images/3.png)
+
+- Bug 6
+
+![Error6](/media/images/6.png)

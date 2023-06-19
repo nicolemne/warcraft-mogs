@@ -99,9 +99,8 @@
                     <h3>Comments:</h3>
                     <div class="card-body">
                         {% for comment in comments %}
-                        {% if user.is_authenticated and user.username == comment.name %}
-                        {% csrf_token %}
                         <form method="post" action="{% url 'comment_delete' post.id %}" class="comment-delete-form">
+                            {% csrf_token %}
                             <div class="comments italic-style" style="padding: 10px;">
                                 <p class="font-weight-bold">
                                     <span class="username-colour">{{ comment.name }}</span>
@@ -110,10 +109,12 @@
                                     </span> wrote:
                                 <div class="position-relative">
                                     <div class="position-absolute bottom-0 end-0">
+                                        {% if user.is_authenticated and user.username == comment.name %}
                                         <input type="hidden" name="comment_id" value="{{ comment.id }}">
                                         <button type="submit" class="btn-delete btn-border remove-comment">
                                             <i class="fa-solid fa-xmark"></i>
                                         </button>
+                                        {% endif %}
                                     </div>
                                 </div>
                                 </p>
@@ -121,7 +122,6 @@
                                 <hr>
                             </div>
                         </form>
-                        {% endif %}
                         {% endfor %}
                         <!-- Pagination -->
                         {% if comments.has_other_pages %}

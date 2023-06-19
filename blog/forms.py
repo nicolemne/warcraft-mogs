@@ -1,6 +1,5 @@
 from .models import Comment, Post, Category, Contact
 from django import forms
-from django_summernote.widgets import SummernoteWidget, SummernoteInplaceWidget
 
 
 category_choices = Category.objects.all().values_list('name', 'name')

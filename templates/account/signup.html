@@ -12,8 +12,8 @@
       <div class="col-md-8 mt-3 offset-md-2">
         <h2 class="title-style">{% trans "Register Account" %}</h2>
 
-        <p class="font-style">{% blocktrans %}Already have an account? <a class="remove-underline"
-            href="{{ login_url }}">Sign in</a> here.{% endblocktrans %}
+        <p class="font-style">{% blocktrans %} Already have an account? <a class="remove-underline"
+            href="{{ login_url }}">Sign in</a> here. {% endblocktrans %}
         </p>
 
         <form class="signup" id="signup_form" method="post" action="{% url 'account_signup' %}">

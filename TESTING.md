@@ -118,16 +118,36 @@ Each device tested the site using the following browsers:
 | `Home Page` |
 |   |   |   |   |
 | Image | When clicked the user will be redirected to Post detail page. |  Clicked image | Redirected to the Post detail page. | Pass |
-| Title | hen clicked the user will be redirected to Post detail page. |  Clicked title | Redirected to the Post detail page. | Pass |
+| Title | When clicked the user will be redirected to Post detail page. |  Clicked title | Redirected to the Post detail page. | Pass |
 | Username | When clicked the user will be redirected to the user page | Clicked username | Does not redirect to profile (feature not implemented) | Fail |
 | Next | When clicked the user will be redirected to the next page with older posts. | Clicked button | Redirected to the next page. | Pass |
 | Previous | When clicked the user will be redirected to the next page with newer posts. | Clicked button | Redirected to the previous page. | Pass |
 | `About Page` |
 |   |   |   |   |  |
-| xxx | xxx | xxx | xxx | xxx |
-| xxx | xxx | xxx | xxx | xxx |
-| xxx | xxx | xxx | xxx | xxx |
-| xxx | xxx | xxx | xxx | xxx |
+| Back Button | When clicked the user will be redirected to the home page. | Clicked button | Redirected to the home page | Pass |
+| `Contact Page` |
+|   |   |   |   |   |
+| Required* Name Field | When left empty, user should be informed that this field needs to be filled in | Submit with empty field | Displays error message to fill in the required field | Pass |
+| Required* Email Field  | When left empty, user should be informed that this field needs to be filled in | Submit with empty field | Displays error message to fill in the required field | Pass |
+| Required* Message Field  | When left empty, user should be informed that this field needs to be filled in | Submit with empty field | Displays error message to fill in the required field | Pass |
+| Email Field Validation  | When not using an @ character or . (.se for example), the user should be informed the email is not valid | Field filled in without @ or . | Form fails to submit | Pass |
+| Name Field | When filled in, form should be submitting correctly | Field left filled in when submitting the form | Form submits correctly | Pass |
+| Email Field  | When filled in, form should be submitting correctly | Field left filled in when submitting the form | Form submits correctly | Pass |
+| Message Field  | When filled in, form should be submitting correctly | Field left filled in when submitting the form | Form submits correctly | Pass |
+| Submit Button  | When clicked, form should be submitted | Clicked button | Form submits correctly | Pass |
+| Submit Redirect  | When form has been submitted, user will be redirected to success_contact.html | Clicking submit button with all required filled in correctly | Redirects to success_contact.html | Pass |
+| `Register Page` |
+| | | | | | |
+| Sign in button Redirect | When clicked, user will be redirected to the sign in page | Clicked button | Redirects to sign in page | Pass |
+| Enter empty Username field | When username field not filled in, an alert should inform the user to fill in this field | Submit with empty username field | Displays error message to fill in the required field  | Pass |
+| Enter empty Password field | When password field not filled in, an alert should inform the user to fill in this field | Submit with empty password field | Displays error message to fill in the required field  | Pass |
+| Enter empty Password Again field | When password field not filled in, an alert should inform the user to fill in this field | Submit with empty password field | Displays error message to fill in the required field | Pass |
+| Username taken | If username is in use, alert is shown to the user that the name is taken | Register with a username already in use | Error message displaying that a user with that username alerady exists | Pass |
+| Empty Password | When left empty, user should be informed that this field needs to be filled in | Submit form with empty password field | Displays error message to fill in the required field | Pass |
+| Password less than 8 characters | When password is entered with fewer than 8 characters, an error message should inform user of minimum 8 characters | Submit form with less than 8 chacters in the password field | Error message displaying that the password is too short and must contain at least 8 characters | Pass |
+| Not matching Passwords | When entering two different passwords, user should be alerted that the passwords are not matching | xxx | xxx | xxx |
+| Submit Button without email  | When clicked, form should be submitted | Clicked button | Form submits correctly | Pass |
+| Submit Button  | When clicked, form should be submitted | Clicked button | Form submits correctly | Pass |
 | xxx | xxx | xxx | xxx | xxx |
 | `Log in Page` |
 | xxx | xxx | xxx | xxx | xxx |
@@ -136,23 +156,15 @@ Each device tested the site using the following browsers:
 | xxx | xxx | xxx | xxx | xxx |
 | xxx | xxx | xxx | xxx | xxx |
 | xxx | xxx | xxx | xxx | xxx |
-| xxx | xxx | xxx | xxx | xxx |
-| `Register Page` |
-| | | | | | |
-| Enter empty Username | If username is in use, message should flash to user | xxx | xxx | Pass |
-| Enter empty Password | This field needs to be filled in | xxx | xxx | Pass |
+| `Upload Post Page` |
 | xxx | xxx | xxx | xxx | xxx |
 | xxx | xxx | xxx | xxx | xxx |
 | xxx | xxx | xxx | xxx | xxx |
 | xxx | xxx | xxx | xxx | xxx |
 | xxx | xxx | xxx | xxx | xxx |
-| `Add Review Page` |
-|   |   |   |   |   |
 | xxx | xxx | xxx | xxx | xxx |
 | xxx | xxx | xxx | xxx | xxx |
-| xxx | xxx | xxx | xxx | xxx |
-| xxx | xxx | xxx | xxx | xxx |
-| `Edit Review Page` |
+| `Edit Post Page` |
 | xxx | xxx | xxx | xxx | xxx |
 | xxx | xxx | xxx | xxx | xxx |
 | xxx | xxx | xxx | xxx | xxx |

@@ -105,11 +105,11 @@ Each device tested the site using the following browsers:
 |  |  |  |  |  |
 | Home (left) | When clicked the user will be redirected to the home page. | Clicked link | Redirected to the home page | Pass |
 | Home (right) | When clicked the user will be redirected to the home page. | Clicked link | Redirected to the home page | Pass |
-| About | xxx | Clicked link | Redirected to the about page | Pass |
-| Contact | xxx | Clicked link | Redirected to the contact page | Pass |
-| Register | xxx | Clicked link | Redirected to the register page | Pass |
-| Sign In | xxx | Clicked link | Redirected to the log in page | Pass |
-| Upload Post | Clicked link | Redirected to the upload post page | Pass | Pass |
+| About | When clicked the user will be redirected to the About page. | Clicked link | Redirected to the about page | Pass |
+| Contact | When clicked the user will be redirected to the Contact page. | Clicked link | Redirected to the contact page | Pass |
+| Register | When clicked the user will be redirected to the Register page. | Clicked link | Redirected to the register page | Pass |
+| Sign In | When clicked the user will be redirected to the Sign In page. | Clicked link | Redirected to the log in page | Pass |
+| Upload Post | When clicked the user will be redirected to the Upload Post page. | Clicked link | Redirected to the upload post page | Pass |
 | `Footer` |
 |  |  |  |  |  |
 | Instagram link | When clicked the user will be redirected to my Instagram page. | Clicked Logo | Redirected to the Instagram page. | Pass |
@@ -117,7 +117,13 @@ Each device tested the site using the following browsers:
 | Github link | When clicked the user will be redirected to my Github page. | Clicked Logo | Redirected to the Github page. | Pass |
 | `Home Page` |
 |   |   |   |   |
-| xxx | xxx | xxx | xxx | xxx |
+| Image | When clicked the user will be redirected to Post detail page. |  Clicked image | Redirected to the Post detail page. | Pass |
+| Title | hen clicked the user will be redirected to Post detail page. |  Clicked title | Redirected to the Post detail page. | Pass |
+| Username | When clicked the user will be redirected to the user page | Clicked username | Does not redirect to profile (feature not implemented) | Fail |
+| Next | When clicked the user will be redirected to the next page with older posts. | Clicked button | Redirected to the next page. | Pass |
+| Previous | When clicked the user will be redirected to the next page with newer posts. | Clicked button | Redirected to the previous page. | Pass |
+| `About Page` |
+|   |   |   |   |  |
 | xxx | xxx | xxx | xxx | xxx |
 | xxx | xxx | xxx | xxx | xxx |
 | xxx | xxx | xxx | xxx | xxx |
@@ -136,37 +142,6 @@ Each device tested the site using the following browsers:
 | Enter empty Username | If username is in use, message should flash to user | xxx | xxx | Pass |
 | Enter empty Password | This field needs to be filled in | xxx | xxx | Pass |
 | xxx | xxx | xxx | xxx | xxx |
-| xxx | xxx | xxx | xxx | xxx |
-| xxx | xxx | xxx | xxx | xxx |
-| xxx | xxx | xxx | xxx | xxx |
-| xxx | xxx | xxx | xxx | xxx |
-| `Search Page` |
-|   |   |   |   |  |
-| xxx | xxx | xxx | xxx | xxx |
-| xxx | xxx | xxx | xxx | xxx |
-| xxx | xxx | xxx | xxx | xxx |
-| xxx | xxx | xxx | xxx | xxx |
-| xxx | xxx | xxx | xxx | xxx |
-| `Bookshelves Page` |
-|   |   |   |   |  |
-| xxx | xxx | xxx | xxx | xxx |
-| xxx | xxx | xxx | xxx | xxx |
-| xxx | xxx | xxx | xxx | xxx |
-| xxx | xxx | xxx | xxx | xxx |
-| xxx | xxx | xxx | xxx | xxx |
-| `Books Page` |
-|   |   |   |   |  |
-| xxx | xxx | xxx | xxx | xxx |
-| xxx | xxx | xxx | xxx | xxx |
-| xxx | xxx | xxx | xxx | xxx |
-| xxx | xxx | xxx | xxx | xxx |
-| xxx | xxx | xxx | xxx | xxx |
-| `Add Bookshelf Page` |
-| xxx | xxx | xxx | xxx | xxx |
-| xxx | xxx | xxx | xxx | xxx |
-| xxx | xxx | xxx | xxx | xxx |
-| xxx | xxx | xxx | xxx | xxx |
-| `Edit Bookshelf Page` |
 | xxx | xxx | xxx | xxx | xxx |
 | xxx | xxx | xxx | xxx | xxx |
 | xxx | xxx | xxx | xxx | xxx |

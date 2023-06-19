@@ -9,14 +9,16 @@
             <!-- Content here -->
             {% for post in post_list %}
             <div class="post-preview">
-                <div class="image-container">
-                    {% if "placeholder" in post.featured_image.url %}
-                    <img class="card-img"
-                        src="https://res.cloudinary.com/dohlebn4a/image/upload/v1686928566/header_dgxosh.png">
-                    {% else %}
-                    <img class="card-img" src="{{ post.featured_image.url }}">
-                    {% endif %}
-                </div>
+                <a href="{% url 'post_detail' post.slug %}">
+                    <div class="image-container">
+                        {% if "placeholder" in post.featured_image.url %}
+                        <img class="card-img"
+                            src="https://res.cloudinary.com/dohlebn4a/image/upload/v1686928566/header_dgxosh.png">
+                        {% else %}
+                        <img class="card-img" src="{{ post.featured_image.url }}">
+                        {% endif %}
+                    </div>
+                </a>
                 <div class="position-relative edit-buttons">
                     <div class="position-absolute bottom-0 end-0">
                         <span class="text-muted h6 no-italics">
@@ -39,7 +41,7 @@
                     {{ post.created_on }}
                     <br>
                     <span class="category-style"><small><span class="hashtag-category">#</span>
-                        {{ post.category }}</small></span>
+                            {{ post.category }}</small></span>
                 </p>
                 <!-- Divider-->
                 <hr class="my-4" />

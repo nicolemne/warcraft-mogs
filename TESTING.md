@@ -103,19 +103,18 @@ Each device tested the site using the following browsers:
 | --- | --- | --- | --- | --- |
 | `Navbar` |
 |  |  |  |  |  |
-| xxx | xxx | xxx | xxx | xxx |
-| xxx | xxx | xxx | xxx | xxx |
-| xxx | xxx | xxx | xxx | xxx |
-| xxx | xxx | xxx | xxx | xxx |
-| xxx | xxx | xxx | xxx | xxx |
-| xxx | xxx | xxx | xxx | xxx |
+| Home (left) | When clicked the user will be redirected to the home page. | Clicked link | Redirected to the home page | Pass |
+| Home (right) | When clicked the user will be redirected to the home page. | Clicked link | Redirected to the home page | Pass |
+| About | xxx | Clicked link | Redirected to the about page | Pass |
+| Contact | xxx | Clicked link | Redirected to the contact page | Pass |
+| Register | xxx | Clicked link | Redirected to the register page | Pass |
+| Sign In | xxx | Clicked link | Redirected to the log in page | Pass |
+| Upload Post | Clicked link | Redirected to the upload post page | Pass | Pass |
 | `Footer` |
 |  |  |  |  |  |
-| xxx | xxx | xxx | xxx | xxx |
-| xxx | xxx | xxx | xxx | xxx |
-| xxx | xxx | xxx | xxx | xxx |
-| xxx | xxx | xxx | xxx | xxx |
-| xxx | xxx | xxx | xxx | xxx |
+| Instagram link | When clicked the user will be redirected to my Instagram page. | Clicked Logo | Redirected to the Instagram page. | Pass |
+| Facebook link | When clicked the user will be redirected to my Facebook page. | Clicked Logo | Redirected to the Facebook page. | Pass |
+| Github link | When clicked the user will be redirected to my Github page. | Clicked Logo | Redirected to the Github page. | Pass |
 | `Home Page` |
 |   |   |   |   |
 | xxx | xxx | xxx | xxx | xxx |
@@ -134,8 +133,8 @@ Each device tested the site using the following browsers:
 | xxx | xxx | xxx | xxx | xxx |
 | `Register Page` |
 | | | | | | |
-| xxx | xxx | xxx | xxx | xxx |
-| xxx | xxx | xxx | xxx | xxx |
+| Enter empty Username | If username is in use, message should flash to user | xxx | xxx | Pass |
+| Enter empty Password | This field needs to be filled in | xxx | xxx | Pass |
 | xxx | xxx | xxx | xxx | xxx |
 | xxx | xxx | xxx | xxx | xxx |
 | xxx | xxx | xxx | xxx | xxx |

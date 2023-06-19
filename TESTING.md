@@ -110,6 +110,7 @@ Each device tested the site using the following browsers:
 | Register | When clicked the user will be redirected to the Register page. | Clicked link | Redirected to the register page | Pass |
 | Sign In | When clicked the user will be redirected to the Sign In page. | Clicked link | Redirected to the log in page | Pass |
 | Upload Post | When clicked the user will be redirected to the Upload Post page. | Clicked link | Redirected to the upload post page | Pass |
+| Sign Out | When clicked the user will be redirected to the Sign Out page. | Clicked link | Redirected to the log out page | Pass |
 | `Footer` |
 |  |  |  |  |  |
 | Instagram link | When clicked the user will be redirected to my Instagram page. | Clicked Logo | Redirected to the Instagram page. | Pass |
@@ -122,9 +123,32 @@ Each device tested the site using the following browsers:
 | Username | When clicked the user will be redirected to the user page | Clicked username | Does not redirect to profile (feature not implemented) | Fail |
 | Next | When clicked the user will be redirected to the next page with older posts. | Clicked button | Redirected to the next page. | Pass |
 | Previous | When clicked the user will be redirected to the next page with newer posts. | Clicked button | Redirected to the previous page. | Pass |
+| Increment Likes Count | Increment the number of likes on post to display the count of likes | Clicked icon | Likes count is incremented by 1 on the index.html page when a user likes a post | Pass |
+| Decrease Likes Count | Decrease the number of likes on post to display the count of likes | Clicked icon | Likes count is decreased by 1 on the index.html page when a user unlikes a post | Pass |
+| Increment Comment Count | Increment the number of comments displayed on a post when a comment is added | Commented on post | Comment count is incremented by 1 on the index.html page when a user comments on a post | Pass |
+| Decrease Comment Count | Decreases the number of comments displayed on a post when a comment is removed | Delete comment | Commen count is decreased by 1 on the index.html page when a user removes their comment on a post | Pass |
+| `Post Detail Page` |
+| Increment Likes Count | Increment the number of likes on post to display the count of likes | Clicked icon | Likes count is incremented by 1 on the index.html page when a user clicks the heart icon | Pass |
+| Decrease Likes Count | Decrease the number of likes on post to display the count of likes | Clicked icon | Likes count is decreased by 1 on the index.html page when a user clicks the heart icon | Pass |
+| Liked Icon (Heart) | The heart icon is solid when a user has liked a post | Clicked icon | Heart icon is coloured in (solid) when a user has liked a post | Pass |
+| Uniked Icon (Heart) | The heart icon is hollow when a user has not yet liked a post | Clicked icon again (after liking it) | Heart icon is hollow when a user has unliked a post | Pass |
+| Edit icon Redirect | When the edit icon is pressed, the user is redirected to the edit_post.html | Clicked edit button | Redirects to edit_post.html |
+| Delete icon Redirect | When the delete icon is pressed, the user is redirected to the delete_post.html | Clicked delete button | Redirects to delete_post.html |
+| Back Button | When a user clicks the back button, they will be redirected to the home page. | Clicked button | Redirected to the home page | Pass |
+| Submit a Comment | When a user writes a comment, the comment will be displayed on the detail_post.html page | Submitted a comment | Comment is displayed in the detail_post.html page | Pass |
+| Comment Message Alert | When a user comments on a post, a message is displayed on the top of the page verifying to the user that their comment was successfully added | Submitted a comment | Displays successful comment message | Pass |
+| Remove a Comment (X Icon) | When a user writes a comment, the comment will be removed on the detail_post.html page | Deleted a comment | Comment is deleted in the detail_post.html page | Pass |
+| Submit Button | When the Submit button is pressed, the comment is successfully added | Clicked Submit button | Successfully submits a comment | Pass |
+| Empty Comments Dield | When the textfield for writing a comment is not filled in, an alert should inform the user to fill in this field | Submit comment with empty textarea field | Displays error message to fill in the required field | Pass |
+| Increment Comment Count | Increment the number of comments displayed on a post when a comment is added | Commented on post | Comment count is incremented by 1 anytime a user comments on a post | Pass |
+| Decrease Comment Count | Decreases the number of comments displayed on a post when a comment is removed | Delete comment | Comment count is decreased by 1 anytime a user removes their comment on a post | Pass |
+| Paginate Comments | Paginates the comments to a new page when the comment count number exceeds 4 | Wrote more than 4 comments | A button to go to next page of comments whenever there is more than 4 comments | Pass |
+| Paginate Buttons | Each button should take the user to either of these comment pages: the first page, previous page, previous page (number), current page (number), next page (number), next page, last page. | Wrote more than 4 comments | A button to go to next page of comments whenever there is more than 4 comments | Pass |
+| Remove comment as not signed in | When a user is attempting to remove a comment without being signed in, the removal icon should not be displayed | Visiting comments section without being logged in | Remove comment icon not displayed | Pass |
+| Remove comment signed in as a different user from the comment author | When a user is attempting to remove a comment without being signed in to the user that wrote the comment, the removal icon should not be displayed | Visiting comments section logged in as a different user from the comment author | Remove comment icon not displayed | Pass |
 | `About Page` |
 |   |   |   |   |  |
-| Back Button | When clicked the user will be redirected to the home page. | Clicked button | Redirected to the home page | Pass |
+| Back Button | When a user clicks the back button, they will be redirected to the home page. | Clicked button | Redirected to the home page | Pass |
 | `Contact Page` |
 |   |   |   |   |   |
 | Required* Name Field | When left empty, user should be informed that this field needs to be filled in | Submit with empty field | Displays error message to fill in the required field | Pass |
@@ -132,49 +156,63 @@ Each device tested the site using the following browsers:
 | Required* Message Field  | When left empty, user should be informed that this field needs to be filled in | Submit with empty field | Displays error message to fill in the required field | Pass |
 | Email Field Validation  | When not using an @ character or . (.se for example), the user should be informed the email is not valid | Field filled in without @ or . | Form fails to submit | Pass |
 | Name Field | When filled in, form should be submitting correctly | Field left filled in when submitting the form | Form submits correctly | Pass |
-| Email Field  | When filled in, form should be submitting correctly | Field left filled in when submitting the form | Form submits correctly | Pass |
-| Message Field  | When filled in, form should be submitting correctly | Field left filled in when submitting the form | Form submits correctly | Pass |
-| Submit Button  | When clicked, form should be submitted | Clicked button | Form submits correctly | Pass |
-| Submit Redirect  | When form has been submitted, user will be redirected to success_contact.html | Clicking submit button with all required filled in correctly | Redirects to success_contact.html | Pass |
+| Email Field | When filled in, form should be submitting correctly | Field left filled in when submitting the form | Form submits correctly | Pass |
+| Message Field | When filled in, form should be submitting correctly | Field left filled in when submitting the form | Form submits correctly | Pass |
+| Submit Button | When clicked, form should be submitted | Clicked button | Form submits correctly | Pass |
+| Submit Redirect | When form has been submitted, user will be redirected to success_contact.html | Clicking submit button with all required filled in correctly | Redirects to success_contact.html successfully | Pass |
 | `Register Page` |
 | | | | | | |
 | Sign in button Redirect | When clicked, user will be redirected to the sign in page | Clicked button | Redirects to sign in page | Pass |
-| Enter empty Username field | When username field not filled in, an alert should inform the user to fill in this field | Submit with empty username field | Displays error message to fill in the required field  | Pass |
-| Enter empty Password field | When password field not filled in, an alert should inform the user to fill in this field | Submit with empty password field | Displays error message to fill in the required field  | Pass |
-| Enter empty Password Again field | When password field not filled in, an alert should inform the user to fill in this field | Submit with empty password field | Displays error message to fill in the required field | Pass |
+| Empty Username field | When username field not filled in, an alert should inform the user to fill in this field | Submit with empty username field | Displays error message to fill in the required field | Pass |
+| Empty Password field | When password field not filled in, an alert should inform the user to fill in this field | Submit with empty password field | Displays error message to fill in the required field | Pass |
+| Empty Password (Again) field | When password field not filled in, an alert should inform the user to fill in this field | Submit with empty password field | Displays error message to fill in the required field | Pass |
 | Username taken | If username is in use, alert is shown to the user that the name is taken | Register with a username already in use | Error message displaying that a user with that username alerady exists | Pass |
 | Empty Password | When left empty, user should be informed that this field needs to be filled in | Submit form with empty password field | Displays error message to fill in the required field | Pass |
 | Password less than 8 characters | When password is entered with fewer than 8 characters, an error message should inform user of minimum 8 characters | Submit form with less than 8 chacters in the password field | Error message displaying that the password is too short and must contain at least 8 characters | Pass |
-| Not matching Passwords | When entering two different passwords, user should be alerted that the passwords are not matching | xxx | xxx | xxx |
+| Not matching Passwords | When entering two different passwords, user should be alerted that the passwords are not matching | Submitting form without matching passwords | Displays error message to user | Pass |
 | Submit Button without email  | When clicked, form should be submitted | Clicked button | Form submits correctly | Pass |
-| Submit Button  | When clicked, form should be submitted | Clicked button | Form submits correctly | Pass |
-| xxx | xxx | xxx | xxx | xxx |
+| Submit Button with email | When clicked, form should be submitted | Clicked button | Form submits correctly | Pass |
+| Submit Redirect | When form has been submitted, user will be redirected to index.html | Clicking submit button with all required filled in correctly | Redirects to index.html successfully | Pass |
 | `Log in Page` |
-| xxx | xxx | xxx | xxx | xxx |
-| xxx | xxx | xxx | xxx | xxx |
-| xxx | xxx | xxx | xxx | xxx |
-| xxx | xxx | xxx | xxx | xxx |
-| xxx | xxx | xxx | xxx | xxx |
-| xxx | xxx | xxx | xxx | xxx |
+| Empty Username field | When username field not filled in, an alert should inform the user to fill in this field | Sign in with empty username field | Displays error message to fill in the required field | Pass |
+| Empty Password field | When password field not filled in, an alert should inform the user to fill in this field | Sign in with empty password field | Displays error message to fill in the required field | Pass |
+| Wrong Username & Password | When a user enters the wrong username and password, it should alert the user that the username/password is not correct | Sign in with wrong username and password | Displays error message that the username or password is incorrect | Pass |
+| Remember me checkbox | When a user clicks the "Remember me" checkbox, it should remember the username the next time the user wants to login | Checked "Remember me" checkbox | Username is not remembered and already filled in when the user is logging in again | Fail |
+| Sign in Button | When the Sign in button is pressed, the user should be logged in to their account | Clicked Sign in button | Successfully logs in a user | Pass |
+| Sign in Redirect | When Sign in button is pressed, user will be redirected to index.html | Clicked Sign in button | Redirects to index.html successfully | Pass |
+| Sign in Message Alert | When a user signs in, a message is displayed on the top of the page verifying to the user that they are logged in | Logged in | Displays log in message successfully | Pass |
+| `Sign out Page` |
+|   |   |   |   |  |
+| Sign Out Button | When clicked the user will be signed out to the home page. | Clicked button | User signed out | Pass |
+| Sign Out Redirect | When Sign out button is pressed, user will be redirected to index.html | Clicked Sign out button | Redirects to index.html successfully | Pass |
+| Sign Out Message | When a user signs out, a message is displayed on the top of the page verifying to the user that they are logged out | Logged in | Displays sign out message successfully | Pass |
 | `Upload Post Page` |
-| xxx | xxx | xxx | xxx | xxx |
-| xxx | xxx | xxx | xxx | xxx |
-| xxx | xxx | xxx | xxx | xxx |
-| xxx | xxx | xxx | xxx | xxx |
-| xxx | xxx | xxx | xxx | xxx |
-| xxx | xxx | xxx | xxx | xxx |
-| xxx | xxx | xxx | xxx | xxx |
+| Empty Title field | When title field not filled in, an alert should inform the user to fill in this field | Submit with empty title field | Displays error message to fill in the required field  | Pass |
+| Empty Content field | When content field not filled in, an alert should inform the user to fill in this field | Submit with empty content field | Displays error message to fill in the required field  | Pass |
+| Submit with Title | When submitting the form with a title, the title will successfully be added to the post | Submit form with title | Submits post with the title the user wrote | Pass |
+| Submit with Description | When submitting the form with a description, the description will successfully be added to the post | Submit form with description | Submits post with the description the user wrote | Pass |
+| Submit with Content | When submitting the form with text content, the content will successfully be added to the post | Submit form with text content | Submits post with the content the user wrote | Pass |
+| Select Category | When selecting a category, the selected category will be successfully be added to the post | Submit form with category | Submits post with the category the user selected | Pass |
+| Submit with Image | When submitting the form with an image, the image will successfully be added to the post | Submit form with image | Submits post with chosen image | Pass |
+| Submit without Image | When submitting the form without an image, the placeholder image will successfully be added to the post | Submit form with image | Submits post with placeholder image | Pass |
+| Submit Button | When the Submit button is pressed, the users uploaded post will be saved | Clicked submit button | Saves and uploads the post successfully | Pass |
+| Submit Redirect | When form has been submitted, user will be redirected to index.html | Clicking submit button with all required filled in correctly | Redirects to post_detail.html successfully | Pass |
 | `Edit Post Page` |
-| xxx | xxx | xxx | xxx | xxx |
-| xxx | xxx | xxx | xxx | xxx |
-| xxx | xxx | xxx | xxx | xxx |
-| xxx | xxx | xxx | xxx | xxx |
-| xxx | xxx | xxx | xxx | xxx |
-| xxx | xxx | xxx | xxx | xxx |
-| xxx | xxx | xxx | xxx | xxx |
+| Pre-populated Title field | When a user edits a post, the original title should be pre-populated in the title field | Clicked edit post button in post_detail.html | Displays the original title text in the title field | Pass |
+| Pre-populated Content field | When a user edits a post, the original content should be pre-populated in the content textarea | Clicked edit post button post_detail.html | Displays the original content text in the content area | Pass |
+| Pre-populated Category field | When a user edits a post, the original category tag that was selected when uploading the post should be displaying | Clicked edit post button post_detail.html | Displays the original category selected | Pass |
+| Pre-populated Image | When a user edits a post, the original image that was selected when uploading the post should be displaying as current image | Clicked edit post button post_detail.html | Displays the original image selected | Pass |
+| Save Button | When the Save button is pressed, the users uploaded post will be saved | Clicked submit button | Saves and uploads the post successfully | Pass |
+| Save Redirect | When form has been submitted, user will be redirected to the edited post (post_detail.html/slug) | Clicked save button | Redirects to the updated post successfully (post_detail.html/slug) | Pass |
+| `Delete Post Page` |
+|   |   |   |   |  |
+| Delete Button | When the user clicks the delete button, the user will be redirected to the home page. | Clicked button | Redirected to the home page | Pass |
 | `Error Page` |
 |   |   |   |   |   |
-| xxx | xxx | xxx | xxx | xxx |
+| Accessing the edit page as not signed in | When a user is attempting to access the edit page without being signed in, a 404 error not found page should be shown | Loading up the URL to edit a post without being signed in | Displays a 404 page not found page | Pass |
+| Accessing the delete page as not signed in | When a user is attempting to access the delete page without being signed in, a 404 error not found page should be shown | Loading up the URL to delete a post without being signed in | Displays a 404 page not found page | Pass |
+| Accessing the edit page as a different user from the post author | When a user is attempting to access the edit page of a post they did not make without being signed in, a 404 error not found page should be shown | Loading up the URL to edit a post without being signed in | Displays a 404 page not found page | Pass |
+| Accessing the delete page as a different user from the post author | When a user is attempting to access the delete page of a post they did not make without being signed in, a 404 error not found page should be shown | Loading up the URL to delete a post without being signed in | Displays a 404 page not found page | Pass |
 
  - - -
 

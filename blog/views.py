@@ -1,5 +1,6 @@
 from django.shortcuts import render, get_object_or_404, redirect
-from django.views.generic import View, CreateView, ListView, UpdateView, DeleteView
+from django.views.generic import View, CreateView, ListView, UpdateView
+from django.views.generic import DeleteView
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.core.paginator import Paginator
 from django.http import HttpResponseRedirect
@@ -60,7 +61,8 @@ class PostDetail(View):
         comments = post.comments.order_by("-created_on")
 
         # Number of comments to display per page
-        paginator = Paginator(comments, 4)  # Set the number of comments per page to 4
+        # Set the number of comments per page to 4
+        paginator = Paginator(comments, 4)
         page_number = request.GET.get('page')
         comments = paginator.get_page(page_number)
 
@@ -79,8 +81,9 @@ class PostDetail(View):
             comment.post = post
             comment.save()
             messages.success(request, 'Comment successfully added!')
-            
-            return redirect('post_detail', slug=slug)  # Redirect to the post detail page
+
+            # Redirect to the post detail page
+            return redirect('post_detail', slug=slug)
 
         return render(
             request,
@@ -99,6 +102,7 @@ class PostLike(View):
     '''
     View to display if the post is liked
     '''
+
     def post(self, request, slug):
         post = get_object_or_404(Post, slug=slug)
 
@@ -162,7 +166,8 @@ class EditPost(UpdateView):
     def form_valid(self, form):
         self.object = form.save()
 
-        return HttpResponseRedirect(reverse('post_detail', args=[self.object.slug]))
+        return HttpResponseRedirect(
+            reverse('post_detail', args=[self.object.slug]))
 
 
 class DeletePost(DeleteView):
@@ -196,7 +201,7 @@ def contact(request):
             return render(request, 'contact_success.html')
     else:
         form = ContactForm()
-   
+
     submitted = request.GET.get('submitted', False)
     context = {
         'form': form,
@@ -210,13 +215,13 @@ class DeleteComment(DeleteView):
         comment_id = request.POST.get('comment_id')
         post = get_object_or_404(Post, id=post_id)
         comment = get_object_or_404(Comment, id=comment_id, post=post)
-        
+
         # Check if the user is the author of the comment
         if comment.name == request.user.username:
             comment.delete()
             messages.success(request, 'Comment successfully deleted.')
         else:
-            messages.error(request, 'You are not authorized to delete this comment.')
+            messages.error(
+                request, 'You are not authorized to delete this comment.')
 
         return redirect('post_detail', slug=post.slug)
-

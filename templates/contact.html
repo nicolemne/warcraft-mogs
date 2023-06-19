@@ -13,7 +13,7 @@
                         class="colour-emphasis"><strong>you!</strong></span> Share your ideas and suggestions by sending
                     us a message!
                 </p>
-                <form class="form-group" id="warcraftmogs-contact" onsubmit="return sendEmailWithFormData()">
+                <form class="form-group" method="POST">
                     {% csrf_token %}
                     {{ form | crispy }}
                     <button class="btn btn-dark btn-style btn-contact" type="submit">Send Message</button>
@@ -23,34 +23,4 @@
     </div>
 </div>
 
-{% endblock %}
-
-{% block scripts %}
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script type="text/javascript">
-function sendEmailWithFormData() {
-    var form = document.getElementById("warcraftmogs-contact");
-    var formData = new FormData(form);
-    formData.set('service_id', 'service_77f87jt');
-    formData.set('template_id', 'service_bezybmp');
-    formData.set('user_id', 'WhFrtUwg0pjrz887N');
-
-    $.ajax({
-        url: 'https://api.emailjs.com/api/v1.0/email/send-form',
-        type: 'POST',
-        data: formData,
-        processData: false,
-        contentType: false,
-        success: function(response) {
-            alert('Your mail is sent!');
-        },
-        error: function(error) {
-            alert('Oops... ' + JSON.stringify(error));
-        }
-    });
-
-    return false; // Prevent form submission
-}
-
-</script>
 {% endblock %}

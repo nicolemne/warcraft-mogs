@@ -214,7 +214,8 @@ Each device tested the site using the following browsers:
 
 ### Known Bugs
 
-List (or put in a table) all known bugs on your site here as soon as you find them. This will prevent you from forgetting any at the end. Some (if not all) of these bugs will hopefully make their way over to the next section, solved bugs, as you progress through your project.
+- Remember me box is not remembering the username when the box has been ticked
+- When accessing edit or delete post logged in as a different user from the author, the 404 error page has a styling bug with the content and footer
 
 ### Solved Bugs
 

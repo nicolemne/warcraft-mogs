@@ -126,7 +126,7 @@ The Agile Methodology was used to develop this website. It was implemented throu
 - *As a Site User, I can register an account so that I can comment and like.*
 - *As a site user, I can upload my own post so that I can share my creation.*
 
-### **Future Implementations (backlog):**
+### **Kanban Board:**
 
 With the Kanban board, the project was split into four sections;
 
@@ -138,6 +138,7 @@ With the Kanban board, the project was split into four sections;
 <details>
 <summary>Kanban board design:</summary>
 <br>
+(Changed colour from Green to Purple on Done, and from Purple to Green for Backlog)
 
 ![Kanban](media/images/kanban.png)
 </details>
@@ -182,14 +183,138 @@ The wireframe below is the general idea and vision I had for the website. It fol
 
 ## **Features**
 
-👩🏻‍💻 View an example of a completed user experience section [here](https://github.com/kera-cudmore/TheQuizArms#Features)
+### **Home Page**
 
-This section can be used to explain what pages your site is made up of.
+- The homepage serves as the landing page.
+- Accessed from the navbar and Home button.
+- Designed to give the user a good understanding of the purpose of this website and catch attention.
+- Displays Post entries and relevant information about them, such as:
+  - title
+  - description
+  - author
+  - date and time of posting
+  - number of likes
+  - number of comments
+  - armor type (category)
+
+![Home](media/images/home-page.png)
+
+### **Detail Page**
+
+- Clicking the image of a post in the Home Page will take the user to the Post Detail Page.
+- Clicking the Description of a post in the Home Page will take the user to the Post Detail Page.
+- Display the Content text that was provided with the uploaded post.
+- Displays amount of comments and likes.
+- Displays all comments on that post.
+- Displays a textarea field for signed in users to comment.
+- Comment pagination buttons if there are more than 4 comments.
+- Ability to Like/Unlike a post.
+
+
+![Detail](media/images/detail-page.png)
+
+### **Edit Page**
+
+- Edit button in the Detail Page redirects to the edit page.
+- Button and Delete Page is only visible to the user that created the post. 
+- Any changes made in this page will be reflected in the Post Detail page when the changes are saved.
+
+![Edit](media/images/edit-page.png)
+
+### **Delete Page**
+
+- Delete button in the Detail Page redirects to the delete page.
+- Button and Edit Page is only visible to the user that created the post. 
+- Deleting a post will remove it from the database and redirect the user to the Home page.
+
+![Delete](media/images/delete-page.png)
+
+### **Upload Page**
+
+- Can only be accessed from the navbar when logged in.
+- Submit button submits the post and redirects the user to the uploaded post detail page
+- Displays 5 fields: 
+ - title
+ - description (displayed on the home page) 
+ - armor (category)
+ - content (displayed in the post detail page)
+ - image upload
+
+![Upload](media/images/upload-page.png)
+
+### **About Page**
+
+- Can be accessed from the navbar to anyone.
+- Back button to take the user back to the Home Page
+
+![About](media/images/about-page.png)
+
+### **Contact Page**
+
+- Can be accessed from the navbar to anyone.
+- Button submits the form and sends the user to the Contact Success Page.
+- Displays three required fields:
+ - name
+ - email
+ - message 
+
+![Contact](media/images/contact-page.png)
+
+### **Contact Success Page**
+
+- The Contact Success Page will be displayed to a user who has successfully filled in the form in the Contact Page.
+
+![Contact Success](media/images/contact-success-page.png)
+
+### **Register Page**
+
+- Can only be accessed from the navbar when a user is not signed in. 
+- Does not appear if you are signed in.
+- If the user already has an account, there is a link provided to redirect the user to the Sign in page.
+- The Register page uses django-allauth to provide all the settings for user authentication. 
+
+![Register](media/images/register-page.png)
+
+### **Sign in Page**
+
+- Can only be accessed from the navbar when a user is not signed in.
+- Does not appear if you are signed in.
+- If the user haven't got an account, there is a link provided to redirect the user to the Register page.
+- The Sign in page uses django-allauth to provide all the settings for user authentication.
+
+![Sign in](media/images/sign-in-page.png)
+
+### **Sign out Page**
+
+- Can only be accessed from the navbar when logged in.
+- When the user clicks the Sign out button, they will be redirected to a site to verify if they want to log out. 
+- The Sign Out page uses django-allauth to provide all the settings for user authentication.
+
+![Sign out](media/images/sign-out-page.png)
+
+### **404 Page**
+
+- The 404 Page will be displayed when a user tries to enter the url for edit/delete a post when they are not signed in.
+- The 404 Page will be displayed when a user tries to enter the url for edit/delete a post when the user is logged in as a user that is not the same author the post they are trying to edit/delete.
+
+![404](media/images/404-page.png)
 
 ### **General features on each page**
 
 All pages feature a navigation bar with access to the following pages: Home, About, Contact, Register and Sign in. If you are already logged in, you can access the pages Upload Post and Sign Out. 
-The footer is also present on all of the pages, with links to my social media accounts and GitHub. 
+The footer is also present on all of the pages, with links to my social media accounts and GitHub. The navbar appears in white when you scroll up on the page. The website is responsive due to the bootstrap theme and styling that has been added. 
+
+- The navbar as it appears on all pages when a user have not scrolled down on the page.
+
+![Nav](media/images/nav.png)
+
+- The white navbar appears when a user is scrolling up on a page
+
+![Nav Scroll](media/images/nav-scroll.png)
+
+- The Footer is displaying on all pages and clicking the social media buttons opens a new tab to my social media handles. 
+
+![Footer](media/images/footer.png)
 
 ### **Future Implementations**
 
@@ -198,6 +323,9 @@ To expand this website further, I would like to add these future implementations
 - Create a user page, and the ability to view other user pages
 - Search field
 - Create drafts
+- Sort and display blog posts by different categories such as newest, oldest, armor, popular (most liked)
+- Add more categories
+
 
 More features and ideas may be added in the future.
 

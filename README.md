@@ -333,7 +333,7 @@ More features and ideas may be added in the future.
 
 I have tried my best to be mindful of accessibility, and the steps I've taken for this are the following:
 
-- Descriptive information about every image on the gallery page
+- Alt tags on the header and placement images
 - Aria labels to the social media links
 - Chose a good colour contrast throughout the website
 - Semantic HTML

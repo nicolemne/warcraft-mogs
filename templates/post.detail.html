@@ -95,8 +95,8 @@
                     <div class="card-body">
                         {% for comment in comments %}
                         {% if user.is_authenticated and user.username == comment.name %}
-                        {% csrf_token %}
                         <form method="post" action="{% url 'comment_delete' post.id %}" class="comment-delete-form">
+                            {% csrf_token %}
                             <div class="comments italic-style" style="padding: 10px;">
                                 <p class="font-weight-bold">
                                     <span class="username-colour">{{ comment.name }}</span>

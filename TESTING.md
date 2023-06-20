@@ -1,12 +1,9 @@
 # PROJECT PORTFOLIO 4 - WARCRAFT MOGS - TESTING
 
-👩🏻‍💻 View an example of this section [here](https://github.com/kera-cudmore/Found-In-Translation/blob/main/TESTING.md#found-in-translation----testing-documentation)
+![amiresponsive](/media/images/amiresponsive.jpg)
 
-Add an image of the finished site here. I like to use [amiresponsive](https://ui.dev/amiresponsive) to get an image of my site on all device sizes, and amiresponsive allows you to click links on the page and scroll, so each device can show a different element of your site.
-
-Add a link to the live site here, for Milestone 1 this will be the GitHub Pages Link from when you deployed the site.
-
-If you want to add optional shields.io badges to your TESTING file, I like to add them to this section (Shields.io have some badges for W3C validation which makes it easy to see at a glance whether the project has passed validation).
+View live site:
+[Warcraft Mogs](https://warcraft-mogs.herokuapp.com/upload/)
 
 ---
 
@@ -27,71 +24,59 @@ If you want to add optional shields.io badges to your TESTING file, I like to ad
 
 ---
 
-## Validators
+## AUTOMATED TESTING
 
-###  W3C Validator
+### W3C Validator
 
-👩🏻‍💻 View an example of a completed W3C HTML & CSS validation section [here](https://github.com/kera-cudmore/TheQuizArms/blob/main/TESTING.md#W3C-Validator)
+[W3C](https://validator.w3.org/) was used to validate the HTML on all pages of the website. It was also used to validate the CSS.
 
-The most popular HTML validator is [W3C](https://validator.w3.org/). There are two ways to validate the HTML for your first milestone - you can copy the live link for your site page and paste into the validate by URI field, or you can copy all the code for your page and paste this into the validate by direct input field.
+* [index](media/images/home-w3c.png) - Passed.
+* [about](media/images/about-w3c.png) - Passed.
+* [contact](media/images/contact-w3c.png) - Passed.
+* [delete](media/images/delete-w3c.png) - Passed.
+* [edit](media/images/edit-w3c.png) - Passed.
+* [logout](media/images/logout-w3c.png) - Passed.
+* [register](media/images/register-w3c.png) - Passed.
+* [sign in](media/images/sign-in-w3c.png) - Passed.
+* [upload](media/images/) - 4 Errors. 
+ 1. Same button is used on the about page, no issues with the button when validating the about page.
+ 2. The width is a built in for the card class in Bootstrap.
+ 3. (and 4) Cannot find the stray div. All divs looks correct and in the right place.
 
-#### **URI Input**
 
-If you validate with your sites URL, you can run the validation and then copy the link from the address bar and insert the link here as your proof of validation.
+* [styles.css](media/images/css_w3c.png) - 29 errors found, all of which are directly linked with the Bootstrap theme for this website, and not my own css code. 
 
-![W3C URI Validator](documentation/milestone1-testing/w3c-uri-validatation.png)
+- - -
 
-#### **Direct Input**
+### JavaScript Validator
 
-If you validate with the code, you will need to screenshot the validation results and then link the image here.
+[jshint](https://jshint.com/) was used to validate the JavaScript.
 
-![W3C Direct Input Validator](documentation/milestone1-testing/w3c-directinput-validation.png)
+* [javascript.js](media/images/javascript_jshint.png) - Passed with 6 warnings, all directly linked to the Bootstrap theme for this website.
 
-#### **CSS Validation**
-
-CSS Validation can only be done by copying and pasting the CSS file contents into the direct input. Make sure that the checkbox for CSS is selected.
-
-![W3C CSS Validation](documentation/milestone1-testing/w3c-css-validation.png)
+- - -
 
 ### Lighthouse
 
-👩🏻‍💻 View an example of a completed lighthouse testing section [here](https://github.com/kera-cudmore/earth-day-hackathon-2022/blob/main/TESTING.md#Lighthouse)
+I used Lighthouse within the Chrome Developer Tools to test the performance, accessibility, best practices and SEO of the website.
 
-Lighthouse Testing is part of the Chrome Developer Tools. For more information on how to use this tool, please visit [chrome Lighthouse](https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk?hl=en#:~:text=Lighthouse%20is%20an%20open%2Dsource,how%20well%20the%20page%20did.).
+### Desktop Results
 
-You will need to run the Lighthouse testing on each individual page of your site, for desktop as a minimum. If you have time it would be great to also add in the mobile testing.
+All pages of the site are achieving a score of 100 across the 4 categories.
 
-![Lighthouse Testing](documentation/milestone1-testing/lighthouse.png)
+![index.html](testing/lighthouse/lighthouse-desktop-index.webp)
 
-### WAVE
+![game.html](testing/lighthouse/lighthouse-desktop-game.webp)
 
-👩🏻‍💻 View an example of a completed WAVE testing section [here](https://github.com/kera-cudmore/earth-day-hackathon-2022/blob/main/TESTING.md#WAVE)
+![highscores.html](testing/lighthouse/lighthouse-desktop-highscores.webp)
 
-[WAVE](https://wave.webaim.org/) is an accessibility testing tool. I like to run this on each page of my site and take a screenshot of the results to add here. They have a website for testing and a Chrome extension.
+![404.html](testing/lighthouse/lighthouse-desktop-404.webp)
 
-![Wave Desktop](documentation/milestone1-testing/wave-desktop.png)
-
-![Wave Exetension](documentation/milestone1-testing/wqave-extension.png)
+![500.html](testing/lighthouse/lighthouse-desktop-500.png)
 
 ## MANUAL TESTING
 
 ### Full Testing
-
-Full testing was performed on the following devices:
-
-* Laptop:
-  * Macbook Pro 2021 14 inch screen
-* Mobile Devices:
-  * iPhone 13 pro.
-  * iPhone 11 pro.
-  * Phone X.
-
-Each device tested the site using the following browsers:
-
-* Google Chrome
-* Safari
-* Firefox
-
 
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | --- | --- | --- | --- | --- |

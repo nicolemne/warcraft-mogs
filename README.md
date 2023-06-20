@@ -8,10 +8,10 @@ While deciding what I wanted to do with my fourth project with Code Institute, m
 
 **I hope you enjoy the website as much as enjoyed making it! It's been a roller coaster of emotions, but in the end, I made it through!**
 
-![amiresponsive](/media/images/...png)
+![amiresponsive](/media/images/amiresponsive.jpg)
 
-Live site:
-[here.]()
+View live site:
+[Warcraft Mogs](https://warcraft-mogs.herokuapp.com/upload/)
 
 ---
 
@@ -102,6 +102,23 @@ Warcraft Mogs is a website developed for transmog enthusiasts in the game World 
 The Agile Methodology was used to develop this website. It was implemented through GitHub and the Project/Kanban Board: 
 [Warcraft Mogs](https://github.com/users/nicolemne/projects/3).
 
+### **Kanban Board:**
+
+With the Kanban board, the project was split into four sections;
+
+- Todo
+- In Progress
+- Done
+- Backlog (future additions)
+
+<details>
+<summary>Kanban board design:</summary>
+<br>
+(Changed colour from Green to Purple on Done, and from Purple to Green for Backlog)
+
+![Kanban](media/images/kanban.png)
+</details>
+
 ### **User Stories**
 
 #### **Iteration 1**
@@ -125,23 +142,6 @@ The Agile Methodology was used to develop this website. It was implemented throu
 - *As a site user, I can delete a blog post so that the post is removed from the blog.*
 - *As a Site User, I can register an account so that I can comment and like.*
 - *As a site user, I can upload my own post so that I can share my creation.*
-
-### **Kanban Board:**
-
-With the Kanban board, the project was split into four sections;
-
-- Todo
-- In Progress
-- Done
-- Backlog (future additions)
-
-<details>
-<summary>Kanban board design:</summary>
-<br>
-(Changed colour from Green to Purple on Done, and from Purple to Green for Backlog)
-
-![Kanban](media/images/kanban.png)
-</details>
 
 ## **Design**
 

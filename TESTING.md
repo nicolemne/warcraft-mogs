@@ -60,19 +60,20 @@ View live site:
 
 I used Lighthouse within the Chrome Developer Tools to test the performance, accessibility, best practices and SEO of the website.
 
+Best Practices score: 
+- I found that the Best practices was underperforming due to bootstrap javascript issues. I have been trying to look into the problems, but due to upcoming submission date I'm unfortunately out of time and will have to submit with this score. 
+
+Performance score: 
+- The Desktop performance score is slightly below the score I would have liked, although a strong improvement after compressing the background and header image. 
+- Mobile score could be improved as it takes a few seconds to load the images. I have yet to learn how to compress the images that are uploaded in the blog and viewed on the index.html page, and will work on improving this. 
+
 ### Desktop Results
 
-All pages of the site are achieving a score of 100 across the 4 categories.
+![Desktop Lighthouse](/media/images/lighthouse-desktop.png)
 
-![index.html](testing/lighthouse/lighthouse-desktop-index.webp)
+### Mobile Results
 
-![game.html](testing/lighthouse/lighthouse-desktop-game.webp)
-
-![highscores.html](testing/lighthouse/lighthouse-desktop-highscores.webp)
-
-![404.html](testing/lighthouse/lighthouse-desktop-404.webp)
-
-![500.html](testing/lighthouse/lighthouse-desktop-500.png)
+![Desktop Lighthouse](/media/images/lighthouse-mobile.png)
 
 ## MANUAL TESTING
 

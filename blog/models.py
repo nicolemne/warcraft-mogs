@@ -9,6 +9,13 @@ class Post(models.Model):
     '''
     Post model to feature a blog post and its content
     '''
+    ARMOR_CHOICES = [
+        ('cloth', 'cloth'),
+        ('leather', 'leather'),
+        ('mail', 'mail'),
+        ('plate', 'plate')
+    ]
+
     title = models.CharField(max_length=200, unique=True)
     slug = models.SlugField(max_length=200, unique=True)
     author = models.ForeignKey(
@@ -19,7 +26,8 @@ class Post(models.Model):
     description = models.CharField(max_length=200, blank=True)
     created_on = models.DateTimeField(auto_now_add=True)
     likes = models.ManyToManyField(User, related_name='blog_likes', blank=True)
-    category = models.CharField(max_length=200, default="undefined")
+    armor = models.CharField(max_length=100, choices=ARMOR_CHOICES,
+                                default='cloth')
 
     class Meta:
         ordering = ['-created_on']
@@ -50,19 +58,6 @@ class Comment(models.Model):
 
     def __str__(self):
         return f"Comment {self.body} by {self.name}"
-
-
-class Category(models.Model):
-    '''
-    Category model to display a category/tag on each post
-    '''
-    name = models.CharField(max_length=200, unique=True)
-
-    def __str__(self):
-        return self.name
-   
-    def get_absolute_url(self):
-        return reverse("home")
 
 
 class Contact(models.Model):

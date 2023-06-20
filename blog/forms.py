@@ -1,12 +1,12 @@
-from .models import Comment, Post, Category, Contact
+from .models import Comment, Post, Contact
 from django import forms
 
 
-category_choices = Category.objects.all().values_list('name', 'name')
-category_list = []
+# category_choices = Category.objects.all().values_list('name', 'name')
+# category_list = []
 
-for item in category_choices:
-    category_list.append(item)
+# for item in category_choices:
+#     category_list.append(item)
 
 
 class UploadForm(forms.ModelForm):
@@ -16,13 +16,13 @@ class UploadForm(forms.ModelForm):
     class Meta:
         model = Post
         fields = ('title', 'description',
-                  'category', 'content', 'featured_image',)
+                  'armor', 'content', 'featured_image',)
 
         widgets = {
             'title': forms.TextInput(attrs={'class': 'form-control',
                                             'placeholder': 'Title'}),
             'content': forms.Textarea(attrs={'class': 'form-control'}),
-            'category': forms.Select(choices=category_list, attrs={'class': 'form-control'}),
+            'armor': forms.Select(attrs={'class': 'form-control'}),
         }
 
 
@@ -33,13 +33,13 @@ class EditForm(forms.ModelForm):
     class Meta:
         model = Post
         fields = ('title', 'description',
-                  'category', 'content', 'featured_image',)
+                  'armor', 'content', 'featured_image',)
 
         widgets = {
             'title': forms.TextInput(attrs={'class': 'form-control',
                                             'placeholder': 'Title'}),
             'content': forms.Textarea(attrs={'class': 'form-control'}),
-            'category': forms.Select(choices=category_list, attrs={'class': 'form-control'}),
+            'armor': forms.Select(attrs={'class': 'form-control'}),
         }
 
 

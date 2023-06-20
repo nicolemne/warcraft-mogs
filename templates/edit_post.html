@@ -6,6 +6,7 @@
 {% if user.is_authenticated %}
 {% if user.id == post.author.id %}
 
+<!-- User has to be authenticated to upload a post -->
 <div class="container">
   <div class="transparent-background">
     <div class="row">
@@ -32,12 +33,13 @@
 
 {% else %}
 
+<!-- Unauthorized user redirected to 404 error page -->
 <div class="container px-4 px-lg-5">
   <div class="row gx-4 gx-lg-5 justify-content-center transparent-background">
       <div class="post-preview">
         <div class="image-container">
           <img class="card-img success-img"
-            src="https://res.cloudinary.com/dohlebn4a/image/upload/v1687015421/404_r8sjyp.png" alt="Thumbs up!">
+            src="https://res.cloudinary.com/dohlebn4a/image/upload/v1687015421/404_r8sjyp.png" alt="404">
         </div>
     </div>
 </div>
@@ -50,7 +52,7 @@
       <div class="post-preview">
         <div class="image-container">
           <img class="card-img success-img"
-            src="https://res.cloudinary.com/dohlebn4a/image/upload/v1687015421/404_r8sjyp.png" alt="Thumbs up!">
+            src="https://res.cloudinary.com/dohlebn4a/image/upload/v1687015421/404_r8sjyp.png" alt="404">
         </div>
       </div>
   </div>

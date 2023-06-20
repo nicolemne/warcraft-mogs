@@ -58,6 +58,9 @@ class CommentForm(forms.ModelForm):
 
 
 class ContactForm(forms.ModelForm):
+    '''
+    Contact form for users to send a message
+    '''
     class Meta:
         model = Contact
         fields = ['name', 'email', 'message']

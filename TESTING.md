@@ -75,12 +75,6 @@ You will need to run the Lighthouse testing on each individual page of your site
 
 ## MANUAL TESTING
 
-### Testing User Stories
-
-👩🏻‍💻 View an example of a completed user stories testing section [here](https://github.com/kera-cudmore/BookWorm/blob/main/TESTING.md#Testing-User-Stories)
-
-This is where you will test the user stories you created in the README against your site. I like to use a table for this section - I create a column for the user stories goals, how these have been achieved and I use the third column to add any supporting images.
-
 ### Full Testing
 
 Full testing was performed on the following devices:

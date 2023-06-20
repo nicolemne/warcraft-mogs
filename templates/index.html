@@ -13,9 +13,9 @@
                     <div class="image-container">
                         {% if "placeholder" in post.featured_image.url %}
                         <img class="card-img"
-                            src="https://res.cloudinary.com/dohlebn4a/image/upload/v1686928566/header_dgxosh.png">
+                            src="https://res.cloudinary.com/dohlebn4a/image/upload/v1686928566/header_dgxosh.png" alt="Night elf standing in front of a Moonwell">
                         {% else %}
-                        <img class="card-img" src="{{ post.featured_image.url }}">
+                        <img class="card-img" src="{{ post.featured_image.url }}" alt="User uploaded image">
                         {% endif %}
                     </div>
                 </a>

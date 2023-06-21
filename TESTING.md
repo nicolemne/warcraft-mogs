@@ -54,6 +54,13 @@ View live site:
 
 * [javascript.js](media/images/javascript_jshint.png) - Passed with 6 warnings, all directly linked to the Bootstrap theme for this website.
 
+
+### Python Validator
+
+[Python linter](https://pep8ci.herokuapp.com/) was used to validate the Python Code.
+
+* [Python code](media/images/python-validator.png) - Passed with 2 errors. A line too long in urls.py and one error regarding indentation in the models.py file. This line error was either over-indented for visual indent, or under-indented.
+
 - - -
 
 ### Lighthouse
